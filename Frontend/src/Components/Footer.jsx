@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import '../App.css';
+import annexsysLogo from '../assets/Annexsyslogo.png';
 
 export default function Footer() {
   return (
@@ -14,7 +15,6 @@ export default function Footer() {
     >
       <div className="container-fluid px-5">
         <div className="row">
-
           {/* About Us + Contact Info */}
           <motion.div
             className="col-md-4 mb-3"
@@ -25,8 +25,7 @@ export default function Footer() {
             <h5>Glenfield Opticians</h5>
             <p>
               Glenfield Opticians Leicester is a trading name of Glenfield Eyecare Limited.<br />Registered in England company registration number #06670441
-
-             <br></br> Registered Office: 93 Dominion Road, Glenfield, Leicestershire, LE3 8JB 
+              <br /> Registered Office: 93 Dominion Road, Glenfield, Leicestershire, LE3 8JB 
             </p>
             <p className="mt-2">
               <strong>Contact:</strong><br />
@@ -61,7 +60,6 @@ export default function Footer() {
               <i className="bi bi-whatsapp" style={{ fontSize: '1.2rem' }}></i>
               WhatsApp
             </a>
-
           </motion.div>
 
           {/* Quick Links */}
@@ -100,7 +98,6 @@ export default function Footer() {
                 { href: "https://www.facebook.com/Glenfield-Opticians-1562092864044502/", icon: "facebook" },
                 { href: "https://twitter.com/glenfieldeyecar", icon: "twitter" },
                 { href: "https://www.instagram.com/glenfield_eyecare?igsh=MXczN3U5MXE3OHV0aQ==", icon: "instagram" },
-                //{ href: "https://linkedin.com", icon: "linkedin" },
               ].map(({ href, icon }, i) => (
                 <motion.li
                   key={i}
@@ -116,7 +113,6 @@ export default function Footer() {
               ))}
             </ul>
           </motion.div>
-
         </div>
 
         <motion.hr
@@ -126,14 +122,28 @@ export default function Footer() {
           transition={{ duration: 0.5 }}
         />
 
+        {/* Footer Bottom Section */}
         <motion.div
-          className="row"
+          className="row align-items-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="col-md-12 text-center">
-            <p>&copy; {new Date().getFullYear()} Glenfield Opticians. All rights reserved.</p>
+          <div className="col-md-6 text-start">
+            <p className="mb-0">&copy; {new Date().getFullYear()} Glenfield Opticians. All rights reserved.</p>
+          </div>
+          <div className="col-md-6 text-end d-flex justify-content-end align-items-center">
+            <span className="me-2">Developed by:</span>
+            <motion.a 
+              href="https://annexsys.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="d-flex align-items-center"
+              whileHover={{ scale: 1.05 }}
+              style={{ cursor: 'pointer' }}
+            >
+              <img src={annexsysLogo} alt="AnnexSys Logo" style={{ maxHeight: '80px' }} />
+            </motion.a>
           </div>
         </motion.div>
       </div>
