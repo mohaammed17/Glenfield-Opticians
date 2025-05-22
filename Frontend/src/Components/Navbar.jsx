@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import logo from '../assets/logo.bmp';
@@ -8,6 +8,7 @@ import '../App.css';
 
 function Navbar() {
   const [top, setTop] = useState(true);
+  const collapseRef = useRef(null);
 
   useEffect(() => {
     const scrollHandler = () => setTop(window.pageYOffset <= 5);
@@ -16,9 +17,8 @@ function Navbar() {
   }, []);
 
   const handleNavLinkClick = () => {
-    const navbarCollapse = document.getElementById("navbarContent");
-    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
-      const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
+    if (collapseRef.current && collapseRef.current.classList.contains("show")) {
+      const bsCollapse = window.bootstrap.Collapse.getInstance(collapseRef.current);
       if (bsCollapse) {
         bsCollapse.hide();
       }
@@ -49,17 +49,26 @@ function Navbar() {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarContent"
+            // Remove data-bs-* attributes to avoid automatic handling
             aria-controls="navbarContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={() => {
+              if (collapseRef.current) {
+                const bsCollapse = window.bootstrap.Collapse.getInstance(collapseRef.current);
+                if (bsCollapse) {
+                  bsCollapse.toggle();
+                } else {
+                  new window.bootstrap.Collapse(collapseRef.current, { toggle: true });
+                }
+              }
+            }}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
 
           {/* Collapsible Content */}
-          <div className="collapse navbar-collapse" id="navbarContent">
+          <div ref={collapseRef} className="collapse navbar-collapse" id="navbarContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
               {[
                 { label: 'Home', to: '/' },

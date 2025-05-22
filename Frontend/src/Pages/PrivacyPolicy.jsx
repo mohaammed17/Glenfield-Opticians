@@ -6,9 +6,7 @@ const PrivacyPolicy = () => {
     <div className="container py-5 animate__animated animate__fadeIn">
       <h2 className="text-center text-primary fw-bold mb-4">Privacy Policy</h2>
 
-      <div
-        className="bg-light p-4 rounded-4 shadow"
-      >
+      <div className="card shadow border-0 rounded-4 p-4 bg-white">
         <p className="text-muted" style={{ textAlign: 'justify' }}>
           Please read our Privacy Policy carefully as this sets out how and why we collect personal information.
           By providing us with personal information, you consent to the processing and transferring of personal
