@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "animate.css";
 
+const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const BookAppointment = () => {
   const initialState = {
@@ -19,15 +20,13 @@ const BookAppointment = () => {
   const [formData, setFormData] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
-const [modalMessage, setModalMessage] = useState("");
-const [isLoading, setIsLoading] = useState(false);
-
-
+  const [modalMessage, setModalMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const getTodayDate = () => {
-  const today = new Date();
-  return today.toISOString().split("T")[0];
-};
+    const today = new Date();
+    return today.toISOString().split("T")[0];
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -56,41 +55,39 @@ const [isLoading, setIsLoading] = useState(false);
     return newErrors;
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  const formErrors = validate();
-  if (Object.keys(formErrors).length > 0) {
-    setErrors(formErrors);
-  } else {
-    setErrors({});
-    setIsLoading(true); // Show loading
-    try {
-      const response = await fetch("http://localhost:5000/api/appointment", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formErrors = validate();
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors);
+    } else {
+      setErrors({});
+      setIsLoading(true); // Show loading
+      try {
+        const response = await fetch(`${apiUrl}/api/appointment`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      if (data.success) {
-        setModalMessage(data.message);
-        setFormData(initialState);
-      } else {
-        setModalMessage("Failed to book appointment.");
+        if (data.success) {
+          setModalMessage(data.message);
+          setFormData(initialState);
+        } else {
+          setModalMessage("Failed to book appointment.");
+        }
+        setShowModal(true);
+      } catch (error) {
+        console.error("Error:", error);
+        setModalMessage("Server error. Please try again later.");
+        setShowModal(true);
+      } finally {
+        setIsLoading(false); 
       }
-      setShowModal(true);
-    } catch (error) {
-      console.error("Error:", error);
-      setModalMessage("Server error. Please try again later.");
-      setShowModal(true);
-    } finally {
-      setIsLoading(false); 
     }
-  }
-};
-
-
+  };
 
   return (
     <div className="container py-5 animate__animated animate__fadeIn">
@@ -127,13 +124,13 @@ const handleSubmit = async (e) => {
           <div className="mb-3">
             <label>Date of Birth* <small className="text-muted">(dd-mm-yyyy)</small></label>
             <input
-    type="date"
-    className="form-control"
-    name="dob"
-    max={getTodayDate()}
-    value={formData.dob}
-    onChange={handleChange}
-  />
+              type="date"
+              className="form-control"
+              name="dob"
+              max={getTodayDate()}
+              value={formData.dob}
+              onChange={handleChange}
+            />
             {errors.dob && <div className="text-danger">{errors.dob}</div>}
           </div>
 
@@ -204,14 +201,14 @@ const handleSubmit = async (e) => {
 
           <div className="mb-3">
             <label>Preferred Appointment Date* <small className="text-muted">(dd-mm-yyyy)</small></label>
-             <input
-    type="date"
-    className="form-control"
-    name="appointmentDate"
-    min={getTodayDate()}
-    value={formData.appointmentDate}
-    onChange={handleChange}
-  />
+            <input
+              type="date"
+              className="form-control"
+              name="appointmentDate"
+              min={getTodayDate()}
+              value={formData.appointmentDate}
+              onChange={handleChange}
+            />
             {errors.appointmentDate && <div className="text-danger">{errors.appointmentDate}</div>}
           </div>
 
@@ -238,41 +235,39 @@ const handleSubmit = async (e) => {
           </div>
         </form>
       </div>
-{showModal && (
-  <div className="custom-modal-backdrop">
-    <div className="custom-modal animate__animated animate__zoomIn">
-      <div className="modal-header bg-primary text-white rounded-top">
-        <h5 className="modal-title text-center">Thank You!</h5>
-        <button
-          type="button"
-          className="btn-close btn-close-white"
-          aria-label="Close"
-          onClick={() => setShowModal(false)}
-        ></button>
-      </div>
-      <div className="modal-body text-center p-4">
-        <i className="bi bi-check-circle-fill text-success fs-1 mb-3"></i>
-        <p className="fs-5">{modalMessage}</p>
-        <button
-          className="btn btn-primary mt-3 px-4"
-          onClick={() => setShowModal(false)}
-        >
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-)}
-{isLoading && (
-  <div className="loading-overlay">
-    <div className="spinner">
-      <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
-    </div>
-  </div>
-)}
-
-
+      {showModal && (
+        <div className="custom-modal-backdrop">
+          <div className="custom-modal animate__animated animate__zoomIn">
+            <div className="modal-header bg-primary text-white rounded-top">
+              <h5 className="modal-title text-center">Thank You!</h5>
+              <button
+                type="button"
+                className="btn-close btn-close-white"
+                aria-label="Close"
+                onClick={() => setShowModal(false)}
+              ></button>
+            </div>
+            <div className="modal-body text-center p-4">
+              <i className="bi bi-check-circle-fill text-success fs-1 mb-3"></i>
+              <p className="fs-5">{modalMessage}</p>
+              <button
+                className="btn btn-primary mt-3 px-4"
+                onClick={() => setShowModal(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="spinner">
+            <div className="circle circle1"></div>
+            <div className="circle circle2"></div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
