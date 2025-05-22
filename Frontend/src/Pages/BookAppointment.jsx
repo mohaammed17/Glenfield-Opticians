@@ -178,6 +178,8 @@ const BookAppointment = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
+                pattern="^07\d{9}$"
+                placeholder="07XXXXXXXXX"
               />
               {errors.phone && <div className="text-danger">{errors.phone}</div>}
             </div>

@@ -80,6 +80,7 @@ const Home = () => {
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
                 <div
                   data-aos="fade-up"
+                  data-aos-anchor-placement="top-bottom"
                   className="carousel-slide-wrapper"
                   style={{
                     backgroundImage: `url(${slide.image})`,

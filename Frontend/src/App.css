@@ -165,7 +165,8 @@
 /* Carousel Enhancements */
 .carousel-slide-wrapper {
   position: relative;
-  height: 80vh;
+  height: 500px;
+  overflow: hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
