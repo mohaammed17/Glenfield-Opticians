@@ -16,14 +16,16 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const carouselElement = document.getElementById('carouselExampleIndicators');
-    if (carouselElement && window.bootstrap) {
-      new window.bootstrap.Carousel(carouselElement, {
-        interval: 5000,
-        ride: 'carousel',
-        pause: 'hover'
-      });
-    }
+    setTimeout(() => {
+      const carouselElement = document.getElementById('carouselExampleIndicators');
+      if (carouselElement && window.bootstrap) {
+        new window.bootstrap.Carousel(carouselElement, {
+          interval: 5000,
+          ride: 'carousel',
+          pause: 'hover'
+        });
+      }
+    }, 100); // adjust the delay (100ms) as needed
   }, []);
 
   const slides = [
