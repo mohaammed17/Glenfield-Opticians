@@ -133,7 +133,7 @@ export default function Footer() {
             <p className="mb-0">&copy; {new Date().getFullYear()} Glenfield Opticians. All rights reserved.</p>
           </div>
           <div className="col-md-6 text-end d-flex justify-content-end align-items-center">
-            <span className="me-2">Developed by:</span>
+            <span className="me-2">Developed by</span>
             <motion.a 
               href="https://annexsys.com" 
               target="_blank" 
