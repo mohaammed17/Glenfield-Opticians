@@ -115,45 +115,6 @@ const EyeCare = () => {
     },
 
     {
-      title: "Flashes and Floaters",
-      description: "Light flashes or floaters like spiders/tadpoles.",
-      image: flashes,
-      details: {
-        what: "Flashes and floaters are visual phenomena caused by debris in the vitreous humour casting shadows on the retina. Floaters appear as black dots, shadows, or hair-like shapes that move with eye movement. Flashes occur when the retina is stimulated, often due to vitreous pulling.",
-        causes: "Floaters commonly result from age-related changes in the vitreous humour, especially after 40. Posterior Vitreous Detachment (PVD) is a common cause. Other causes include retinal tears or detachment, eye trauma, and high myopia. As the vitreous shrinks with age, it may pull away from the retina, causing floaters and flashes.",
-        symptoms: "Floaters: moving spots, shadows, or cobweb-like shapes, especially against bright backgrounds. Flashes: bursts or streaks of light. Red flags include a sudden increase in floaters, flashing lights, grey shadows, or impaired vision, which may indicate retinal damage.",
-        treatment: "Most floaters are harmless and require no treatment. If serious, an optometrist will examine the retina using pupil-dilating drops and visual field analysis. Retinal tears/detachments may need hospital referral. Eye drops won’t eliminate floaters. Moving your eyes up and down can sometimes shift the floater out of view.",
-        expectation: "Floaters may fade, become less noticeable, or remain persistent. Regular eye tests (every 2 years) are recommended to monitor changes. Seek prompt care if symptoms worsen or affect vision."
-      }
-    },
-
-    {
-      title: "Macular Degeneration",
-      description: "Causes loss of central vision.",
-      image: macular,
-      details: {
-        what: "Macular degeneration is a painless condition that affects the macula, the central part of the retina responsible for detailed vision. It leads to progressive central vision loss, making activities like reading and recognizing faces difficult. The peripheral vision usually remains intact.",
-        causes: "Caused by a partial breakdown of retinal cells and waste buildup in the retina. Major risk factors include aging, smoking, genetics, poor diet, and prolonged exposure to UV light. There are two types: dry AMD (90% of cases) and wet AMD (10%, more severe). Dry AMD can turn into wet AMD.",
-        symptoms: "Gradual central vision blurring in dry AMD; sudden central vision loss in wet AMD. Other symptoms include visual distortions (straight lines appearing wavy), difficulty reading, recognizing faces, and judging distances. Peripheral vision remains clear. An Amsler grid may reveal distortions or missing areas.",
-        treatment: "Wet AMD: Early detection is key. Treatments include anti-VEGF injections (like Macugen), laser surgery, and photodynamic therapy to destroy abnormal blood vessels. Dry AMD: No cure, but a diet rich in antioxidants (lutein, zeaxanthin from leafy greens) may slow progression. Vision aids like magnifiers can help.",
-        expectation: "AMD is progressive and can lead to significant vision loss, especially if untreated. Regular eye exams are crucial for early detection. If AMD is diagnosed, you may be referred to an ophthalmologist for further tests like fluorescein angiography to examine blood vessels in the eye."
-      }
-    },
-
-    {
-      title: "Diabetic Retinopathy",
-      description: "High blood sugar damaging back eye cells.",
-      image: diabetic,
-      details: {
-        what: "Diabetic Retinopathy is a diabetes-related condition where high blood sugar damages the small blood vessels in the retina, potentially leading to vision loss or blindness. It is a complication of diabetes mellitus and can affect up to 80% of those with diabetes for 10 years or more.",
-        causes: "Caused by prolonged high blood glucose levels that weaken and damage retinal blood vessels, leading to hemorrhages, fluid leaks, swelling (macular edema), and growth of abnormal vessels due to lack of oxygen. Good diabetes control significantly reduces the risk.",
-        symptoms: "Early stages may have no symptoms. As it progresses, symptoms include blurred or fluctuating vision, eye floaters and spots, double vision, dark areas in vision, and in some cases, eye pain. Macular edema can cause noticeable vision loss.",
-        treatment: "Early detection is key. Regular eye exams help catch it early. Treatments include laser therapy to seal leaking vessels, anti-VEGF injections to stop abnormal vessel growth, and managing blood sugar levels effectively. Advanced stages are harder to treat.",
-        expectation: "It requires lifelong diabetes management and regular eye checkups. Vision loss may occur if not treated promptly. Macular edema can come and go, causing vision changes throughout the day. In the UK, diabetics are eligible for free annual eye exams through the NHS."
-      }
-    },
-
-    {
       title: "Dry Eye",
       description: "Caused by problems with tear production or drainage.",
       image: EyeImg,
@@ -190,6 +151,45 @@ const EyeCare = () => {
         treatment: "Many cases clear up without treatment. If necessary, treatment depends on the cause: antibiotics for bacterial infections, antihistamines for allergies, and avoidance of irritants in irritant conjunctivitis. Maintain hygiene, avoid contact lenses during infection, and cleanse crusts with cotton wool and water.",
         expectation: "Conjunctivitis usually resolves on its own within a couple of weeks. However, see a doctor if you experience eye pain, sensitivity to light, changes in vision, or intense redness. Practicing good hygiene can help prevent spreading the infection."
       }
+    },
+
+    {
+      title: "Flashes and Floaters",
+      description: "Light flashes or floaters like spiders/tadpoles.",
+      image: flashes,
+      details: {
+        what: "Flashes and floaters are visual phenomena caused by debris in the vitreous humour casting shadows on the retina. Floaters appear as black dots, shadows, or hair-like shapes that move with eye movement. Flashes occur when the retina is stimulated, often due to vitreous pulling.",
+        causes: "Floaters commonly result from age-related changes in the vitreous humour, especially after 40. Posterior Vitreous Detachment (PVD) is a common cause. Other causes include retinal tears or detachment, eye trauma, and high myopia. As the vitreous shrinks with age, it may pull away from the retina, causing floaters and flashes.",
+        symptoms: "Floaters: moving spots, shadows, or cobweb-like shapes, especially against bright backgrounds. Flashes: bursts or streaks of light. Red flags include a sudden increase in floaters, flashing lights, grey shadows, or impaired vision, which may indicate retinal damage.",
+        treatment: "Most floaters are harmless and require no treatment. If serious, an optometrist will examine the retina using pupil-dilating drops and visual field analysis. Retinal tears/detachments may need hospital referral. Eye drops won’t eliminate floaters. Moving your eyes up and down can sometimes shift the floater out of view.",
+        expectation: "Floaters may fade, become less noticeable, or remain persistent. Regular eye tests (every 2 years) are recommended to monitor changes. Seek prompt care if symptoms worsen or affect vision."
+      }
+    },
+
+    {
+      title: "Macular Degeneration",
+      description: "Causes loss of central vision.",
+      image: macular,
+      details: {
+        what: "Macular degeneration is a painless condition that affects the macula, the central part of the retina responsible for detailed vision. It leads to progressive central vision loss, making activities like reading and recognizing faces difficult. The peripheral vision usually remains intact.",
+        causes: "Caused by a partial breakdown of retinal cells and waste buildup in the retina. Major risk factors include aging, smoking, genetics, poor diet, and prolonged exposure to UV light. There are two types: dry AMD (90% of cases) and wet AMD (10%, more severe). Dry AMD can turn into wet AMD.",
+        symptoms: "Gradual central vision blurring in dry AMD; sudden central vision loss in wet AMD. Other symptoms include visual distortions (straight lines appearing wavy), difficulty reading, recognizing faces, and judging distances. Peripheral vision remains clear. An Amsler grid may reveal distortions or missing areas.",
+        treatment: "Wet AMD: Early detection is key. Treatments include anti-VEGF injections (like Macugen), laser surgery, and photodynamic therapy to destroy abnormal blood vessels. Dry AMD: No cure, but a diet rich in antioxidants (lutein, zeaxanthin from leafy greens) may slow progression. Vision aids like magnifiers can help.",
+        expectation: "AMD is progressive and can lead to significant vision loss, especially if untreated. Regular eye exams are crucial for early detection. If AMD is diagnosed, you may be referred to an ophthalmologist for further tests like fluorescein angiography to examine blood vessels in the eye."
+      }
+    },
+
+    {
+      title: "Diabetic Retinopathy",
+      description: "High blood sugar damaging back eye cells.",
+      image: diabetic,
+      details: {
+        what: "Diabetic Retinopathy is a diabetes-related condition where high blood sugar damages the small blood vessels in the retina, potentially leading to vision loss or blindness. It is a complication of diabetes mellitus and can affect up to 80% of those with diabetes for 10 years or more.",
+        causes: "Caused by prolonged high blood glucose levels that weaken and damage retinal blood vessels, leading to hemorrhages, fluid leaks, swelling (macular edema), and growth of abnormal vessels due to lack of oxygen. Good diabetes control significantly reduces the risk.",
+        symptoms: "Early stages may have no symptoms. As it progresses, symptoms include blurred or fluctuating vision, eye floaters and spots, double vision, dark areas in vision, and in some cases, eye pain. Macular edema can cause noticeable vision loss.",
+        treatment: "Early detection is key. Regular eye exams help catch it early. Treatments include laser therapy to seal leaking vessels, anti-VEGF injections to stop abnormal vessel growth, and managing blood sugar levels effectively. Advanced stages are harder to treat.",
+        expectation: "It requires lifelong diabetes management and regular eye checkups. Vision loss may occur if not treated promptly. Macular edema can come and go, causing vision changes throughout the day. In the UK, diabetics are eligible for free annual eye exams through the NHS."
+      }
     }
   ];
 
@@ -216,7 +216,7 @@ const EyeCare = () => {
                   <motion.div
                     data-aos="zoom-in-up"
                     className="card border-0 rounded-4 overflow-hidden shadow-sm h-100"
-                    initial={{ opacity: 0.8 }}
+                    initial={{ opacity: 0.8, scale: 1 }}
                     whileHover={hoverEffect}
                     whileTap={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.25)" }}
                     style={{ minHeight: '400px' }}
@@ -245,7 +245,7 @@ const EyeCare = () => {
                   <motion.div
                     data-aos="zoom-in-up"
                     className="card border-0 rounded-4 overflow-hidden shadow-sm h-100"
-                    initial={{ opacity: 0.8 }}
+                    initial={{ opacity: 0.8, scale: 1 }}
                     whileHover={hoverEffect}
                     whileTap={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.25)" }}
                     style={{ minHeight: '400px' }}
