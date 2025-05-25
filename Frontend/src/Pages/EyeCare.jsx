@@ -218,6 +218,7 @@ const EyeCare = () => {
                     className="card border-0 rounded-4 overflow-hidden shadow-sm h-100"
                     initial={{ opacity: 0.8 }}
                     whileHover={hoverEffect}
+                    whileTap={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.25)" }}
                     style={{ minHeight: '400px' }}
                   >
                     <img
@@ -246,6 +247,7 @@ const EyeCare = () => {
                     className="card border-0 rounded-4 overflow-hidden shadow-sm h-100"
                     initial={{ opacity: 0.8 }}
                     whileHover={hoverEffect}
+                    whileTap={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.25)" }}
                     style={{ minHeight: '400px' }}
                   >
                     <img
