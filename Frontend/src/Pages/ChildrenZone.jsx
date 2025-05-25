@@ -29,7 +29,7 @@ const ChildrenZone = () => {
                 With 1 in 5 children having undetected eye problems, we recommend that every child's eyes should be checked at least once a year as part of their overall health regime.
               </p>
               <p className="text-success fw-semibold">
-                Note: In the United Kingdom, all children aged under 16 and up to the age of 18 are entitled to a free eye test and a contribution towards glasses funded by the NHS.
+                Note: In the United Kingdom, all children under the age of 16, and those aged 16 to 18 in full-time education, are entitled to a free eye test and a contribution towards the cost of glasses, funded by the NHS.
               </p>
             </div>
           </div>
