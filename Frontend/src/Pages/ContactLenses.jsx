@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import lensesImage from '../assets/lenses.png'; // Import the image
 
 const ContactLenses = () => {
   useEffect(() => {
@@ -17,14 +18,25 @@ const ContactLenses = () => {
 
         <div className="row justify-content-center">
           <div className="col-lg-10">
-            <div data-aos="zoom-in-up" className="card border-0 shadow rounded-4 p-4">
-              <div className="card-body">
-                <p className="text-muted" style={{ textAlign: 'justify' }}>
+            <div
+              data-aos="zoom-in-up"
+              className="card border-0 shadow rounded-4 p-4"
+              style={{
+                backgroundImage: `url(${lensesImage})`, // Use the imported image here
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundBlendMode: "lighten",
+                backgroundColor: "rgba(255,255,255,0.4)"
+              }}
+            >
+              <div className="card-body" style={{ color: "#333" }}>
+                <p style={{ textAlign: "justify" }}>
                   We offer contact lens consultations for new fittings and aftercare for existing contact lens wearers.
                 </p>
 
-                <h5 className="fw-bold mt-4 text-info">We provide all varieties of lenses:</h5>
-                <ul className="text-muted" style={{ textAlign: 'justify' }}>
+                <h5 className="fw-bold mt-4 text-info" style={{ color: "#222" }}>We provide all varieties of lenses:</h5>
+                <ul style={{ textAlign: "justify", color: "#333" }}>
                   <li>Conventional yearly lenses</li>
                   <li>Monthly disposable lenses</li>
                   <li>Biweekly disposable lenses</li>
@@ -32,14 +44,14 @@ const ContactLenses = () => {
                   <li>Soft coloured cosmetic lenses</li>
                 </ul>
 
-                <h5 className="fw-bold mt-4 text-info">We sell:</h5>
-                <ul className="text-muted" style={{ textAlign: 'justify' }}>
+                <h5 className="fw-bold mt-4 text-info" style={{ color: "#222" }}>We sell:</h5>
+                <ul style={{ textAlign: "justify", color: "#333" }}>
                   <li>Single vision</li>
                   <li>Toric lenses (for astigmatism)</li>
                   <li>Progressive contact lenses</li>
                 </ul>
 
-                <p className="text-muted mt-3" style={{ textAlign: 'justify' }}>
+                <p className="mt-3" style={{ textAlign: "justify" }}>
                   We also do contact lens fitting and aftercare for rigid gas permeable lenses.
                 </p>
 
