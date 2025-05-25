@@ -4,6 +4,7 @@ import '../App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonials from '../Components/Testimonials';
+import { Link } from 'react-router-dom';
 
 import slide1 from '../assets/slide1.png';
 import homevisitng from '../assets/homevisitng.png';
@@ -120,11 +121,11 @@ const Home = () => {
       {/* About Section */}
       <section id="about" className="about-section py-5 bg-light">
         <div className="row justify-content-center">
-          <div className="col-12 col-md-8 col-lg-6 mb-4">
+          <div className="col-12 col-md-10 col-lg-8 mb-4">
             <div data-aos="zoom-in-up" className="card h-100 shadow-sm border-0 rounded-4 p-3">
               <h5 className="fw-bold text-info text-center">About Us</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We are an independent opticians located in glenfield, Leicester. We pride ourselves on being able to provide a professional, personal and friendly service to the community, which is not always possible at regular high street practices. Whether you require spectacles or not, we are committed to providing the highest level of eye care.
+                We are an independent opticians located in Glenfield, Leicester. We pride ourselves on providing a professional, personal, and friendly service to the community – something not always possible at regular high street practices. Whether you require spectacles or not, we are committed to delivering the highest level of eye care.
               </p>
             </div>
           </div>
@@ -185,26 +186,34 @@ const Home = () => {
           <h2 className="text-center mb-4">Our Services</h2>
           <div className="row">
             <div className="col-md-4 text-center">
-              <i className="bi bi-eyeglasses fs-1 text-primary"></i>
-              <h5>Eye Tests</h5>
-              <p>Comprehensive eye tests at your home or in-clinic.</p>
+              <Link to="/freeeyetest" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <i className="bi bi-eyeglasses fs-1 text-primary"></i>
+                <h5>Eye Tests</h5>
+                <p>Comprehensive eye tests at your home or in-clinic.</p>
+              </Link>
             </div>
             <div className="col-md-4 text-center">
-              <i className="bi bi-house-door fs-1 text-primary"></i>
-              <h5>Home Visits</h5>
-              <p>We bring quality care to your doorstep.</p>
+              <Link to="/home-visit" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <i className="bi bi-house-door fs-1 text-primary"></i>
+                <h5>Home Visits</h5>
+                <p>We bring quality care to your doorstep.</p>
+              </Link>
             </div>
             <div className="col-md-4 text-center">
-              <i className="bi bi-laptop fs-1 text-primary"></i>
-              <h5>Corporate Eye Care</h5>
-              <p>On-site eye care services for companies and employees.</p>
+              <Link to="/corporate-eye-care" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <i className="bi bi-laptop fs-1 text-primary"></i>
+                <h5>Corporate Eye Care</h5>
+                <p>On-site eye care services for companies and employees.</p>
+              </Link>
             </div>
           </div>
           <div className="row mt-4">
             <div className="col-md-4 offset-md-4 text-center">
-              <i className="bi bi-ear fs-1 text-primary"></i>
-              <h5>Hearing Test</h5>
-              <p>Professional hearing assessments by specialists.</p>
+              <Link to="/hearing-test" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <i className="bi bi-ear fs-1 text-primary"></i>
+                <h5>Hearing Test</h5>
+                <p>Professional hearing assessments by specialists.</p>
+              </Link>
             </div>
           </div>
         </div>
