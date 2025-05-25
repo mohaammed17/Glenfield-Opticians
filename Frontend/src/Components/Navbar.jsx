@@ -25,6 +25,10 @@ function Navbar() {
     }
   };
 
+  // Place this at the top of your component
+  const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+  const logoHoverEffect = isMobile ? {} : { scale: 1.1 };
+
   return (
     <motion.header
       className={`main-navbar fixed-top ${top ? '' : 'scrolled'}`}
@@ -40,7 +44,7 @@ function Navbar() {
               src={logo}
               alt="logo"
               className="logo-img me-2 rounded shadow-sm"
-              whileHover={{ scale: 1.1 }}
+              whileHover={logoHoverEffect}
               transition={{ type: 'spring', stiffness: 300 }}
             />
           </Link>
