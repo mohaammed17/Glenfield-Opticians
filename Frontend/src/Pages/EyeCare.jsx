@@ -9,6 +9,9 @@ import { motion } from 'framer-motion';
 import CataractImg from '../assets/Cataract.png';
 import GlaucomaImg from '../assets/Glaucoma.png';
 import EyeImg from '../assets/Eye.png';
+import flashes from '../assets/Flashes.png';
+import macular from '../assets/Macular.png';
+import diabetic from '../assets/diabetic.png';
 import BlepharitisImg from '../assets/Bilaphitris.png';
 import ConjunctivitisImg from '../assets/Conjuctivis.png';
 
@@ -114,7 +117,7 @@ const EyeCare = () => {
     {
       title: "Flashes and Floaters",
       description: "Light flashes or floaters like spiders/tadpoles.",
-      image: EyeImg,
+      image: flashes,
       details: {
         what: "Flashes and floaters are visual phenomena caused by debris in the vitreous humour casting shadows on the retina. Floaters appear as black dots, shadows, or hair-like shapes that move with eye movement. Flashes occur when the retina is stimulated, often due to vitreous pulling.",
         causes: "Floaters commonly result from age-related changes in the vitreous humour, especially after 40. Posterior Vitreous Detachment (PVD) is a common cause. Other causes include retinal tears or detachment, eye trauma, and high myopia. As the vitreous shrinks with age, it may pull away from the retina, causing floaters and flashes.",
@@ -127,7 +130,7 @@ const EyeCare = () => {
     {
       title: "Macular Degeneration",
       description: "Causes loss of central vision.",
-      image: EyeImg,
+      image: macular,
       details: {
         what: "Macular degeneration is a painless condition that affects the macula, the central part of the retina responsible for detailed vision. It leads to progressive central vision loss, making activities like reading and recognizing faces difficult. The peripheral vision usually remains intact.",
         causes: "Caused by a partial breakdown of retinal cells and waste buildup in the retina. Major risk factors include aging, smoking, genetics, poor diet, and prolonged exposure to UV light. There are two types: dry AMD (90% of cases) and wet AMD (10%, more severe). Dry AMD can turn into wet AMD.",
@@ -140,7 +143,7 @@ const EyeCare = () => {
     {
       title: "Diabetic Retinopathy",
       description: "High blood sugar damaging back eye cells.",
-      image: EyeImg,
+      image: diabetic,
       details: {
         what: "Diabetic Retinopathy is a diabetes-related condition where high blood sugar damages the small blood vessels in the retina, potentially leading to vision loss or blindness. It is a complication of diabetes mellitus and can affect up to 80% of those with diabetes for 10 years or more.",
         causes: "Caused by prolonged high blood glucose levels that weaken and damage retinal blood vessels, leading to hemorrhages, fluid leaks, swelling (macular edema), and growth of abnormal vessels due to lack of oxygen. Good diabetes control significantly reduces the risk.",
