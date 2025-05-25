@@ -23,13 +23,13 @@ const ChildrenZone = () => {
                 As most schools no longer offer Eye Tests, fewer children are having their eyes checked regularly. That's why we want to make it easy and affordable to ensure your child's eyes are being properly cared for.
               </p>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                Vision and learning are closely related. 80% of what children learn is through vision, so diagnosing problems early is extremely important to ensure that children of all ages reach their full academic potential.
+                Vision and learning are closely related. More than 80% of what children learn is through vision, so diagnosing problems early is extremely important to ensure that children of all ages reach their full academic potential.
               </p>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
                 With 1 in 5 children having undetected eye problems, we recommend that every child's eyes should be checked at least once a year as part of their overall health regime.
               </p>
               <p className="text-success fw-semibold">
-                Remember, all children under 16 are entitled to a free eye test and a contribution towards glasses on the NHS.
+                Note: In the United Kingdom, all children aged under 16 and up to the age of 18 are entitled to a free eye test and a contribution towards glasses funded by the NHS.
               </p>
             </div>
           </div>
@@ -46,7 +46,9 @@ const ChildrenZone = () => {
               <p className="text-muted" style={{ textAlign: 'justify' }}>
                 All children’s lenses include scratch-resistant coating as standard. Based on their lifestyle or prescription, we may also recommend specialized lenses to enhance durability and comfort.
               </p>
-
+              <p className="text-muted" style={{ textAlign: 'justify' }}>
+                We also offer sports glasses and contact lenses for children.
+              </p>
               <div className="text-center mt-3">
                 <a href="/book-appointment" className="btn btn-primary px-4">
                   Book Appointment

@@ -46,6 +46,13 @@ const SpecialOffers = () => {
                   ))}
                 </ul>
 
+                {/* Note for the whole box */}
+                <div className="text-center mt-3">
+                  <p className="text-muted" style={{ fontStyle: 'italic', fontSize: '0.9rem' }}>
+                    <strong>Note:</strong> We also offer upgrades on frames and lenses at extra cost.
+                  </p>
+                </div>
+
                 <div className="text-center mt-4">
                   <a href="/book-appointment" className="btn btn-primary px-4">
                     Book Appointment

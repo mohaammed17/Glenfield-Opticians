@@ -95,7 +95,7 @@ function Navbar() {
                 </motion.a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NavLink to="/freeeyetest" className="dropdown-item" onClick={handleNavLinkClick}>Eye Test</NavLink>
+                    <NavLink to="/freeeyetest" className="dropdown-item" onClick={handleNavLinkClick}>Eye Examination</NavLink>
                   </li>
                   <li>
                     <NavLink to="/corporate-eye-care" className="dropdown-item" onClick={handleNavLinkClick}>Corporate Eye Care</NavLink>
