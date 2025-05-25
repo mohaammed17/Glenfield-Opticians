@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
 
 const SpecialOffers = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const SpecialOffers = () => {
     "2 Pairs of Varifocals or Bifocals for £139",
     "Single Vision Prescription Sunglasses for £55",
     "Varifocal or Bifocal sunglasses for £114",
-    "Free NHS Funded Glasses for children",
+    "Free NHS-funded glasses available for children and individuals receiving benefits.",
     "Free one month trial on contact lenses.",
     "We offer express on-the-hour glazing services for most single vision lens glasses."
   ];
@@ -31,16 +32,17 @@ const SpecialOffers = () => {
               <div className="card-body">
                 <ul className="list-group list-group-flush">
                   {offers.map((offer, index) => (
-                    <li
+                    <motion.li
                       key={index}
                       className="list-group-item bg-transparent text-muted"
-                      
                       data-aos-delay={index * 100}
                       style={{ textAlign: 'justify' }}
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
                     >
                       <i className="bi bi-check-circle text-success me-2"></i>
                       {offer}
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
 

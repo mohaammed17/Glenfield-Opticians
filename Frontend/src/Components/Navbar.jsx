@@ -40,7 +40,7 @@ function Navbar() {
               src={logo}
               alt="logo"
               className="logo-img me-2 rounded shadow-sm"
-              whileHover={{ rotate: 5 }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 300 }}
             />
           </Link>

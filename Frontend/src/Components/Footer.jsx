@@ -38,7 +38,8 @@ export default function Footer() {
               >
                 <i className="bi bi-envelope-fill me-2"></i>
                 info@glenfieldopticians.co.uk
-              </motion.a><br />
+              </motion.a>
+              <br />
               <motion.a
                 href="tel:01162874357"
                 className="text-decoration-none text-black d-inline-block"
@@ -47,7 +48,18 @@ export default function Footer() {
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 <i className="bi bi-telephone-fill me-2"></i>
-                0116 2874357
+                +44 116 287 4357
+              </motion.a>
+              <br />
+              <motion.a
+                href="tel:+447860479997"
+                className="text-decoration-none text-black d-inline-block"
+                whileHover={{ scale: 1.05, x: 5 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <i className="bi bi-telephone-fill me-2"></i>
+                +44 7860 479997
               </motion.a>
             </p>
             <a 

@@ -120,22 +120,12 @@ const Home = () => {
 
       {/* About Section */}
       <section id="about" className="about-section py-5 bg-light">
-        <div className="row">
-          {/* Who We Are */}
-          <div className="col-md-6 mb-4">
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-8 col-lg-6 mb-4">
             <div data-aos="zoom-in-up" className="card h-100 shadow-sm border-0 rounded-4 p-3">
               <h5 className="fw-bold text-info text-center">About Us</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We are an independent opticians based in Glenfield, Leicester. Established since 2009, we pride ourselves on being able to provide a professional, personal service which is not always possible in your regular high street practice. Whether you require spectacles or not, we are committed to providing the highest level of Eye Care. We also provide hearing care services.
-              </p>
-            </div>
-          </div>
-          {/* Home Visiting Optician */}
-          <div className="col-md-6 mb-4">
-            <div data-aos="zoom-in-up" className="card h-100 shadow-sm border-0 rounded-4 p-3">
-              <h5 className="fw-bold text-info text-center">Your Home Visiting Optician</h5>
-              <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We have been awarded a contract by the NHS to provide eye care services in the comfort of your own home. This service is designed for those who cannot visit our practice unaccompanied due to physical or mental disability. We carry out complete eye tests and offer the same special deals on glasses that are available at our practice.
+                We are an independent opticians located in glenfield, Leicester. We pride ourselves on being able to provide a professional, personal and friendly service to the community, which is not always possible at regular high street practices. Whether you require spectacles or not, we are committed to providing the highest level of eye care.
               </p>
             </div>
           </div>
@@ -180,8 +170,8 @@ const Home = () => {
                   <td>By appointments only</td>
                 </tr>
                 <tr>
-                  <td colSpan="2" className="text-muted text-center">
-                    Closed on bank holidays and between 12.00pm and 2.00pm on Fridays
+                  <td colSpan="2" className="text-center">
+                    <strong>Closed on Sundays, bank holidays, and between 12:00 PM and 2:00 PM on Fridays.</strong>
                   </td>
                 </tr>
               </tbody>
@@ -206,7 +196,7 @@ const Home = () => {
               <p>We bring quality care to your doorstep.</p>
             </div>
             <div className="col-md-4 text-center">
-              <i className="bi bi-briefcase fs-1 text-primary"></i>
+              <i className="bi bi-laptop fs-1 text-primary"></i>
               <h5>Corporate Eye Care</h5>
               <p>On-site eye care services for companies and employees.</p>
             </div>

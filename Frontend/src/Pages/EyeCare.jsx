@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Button } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import backgroundVideo from '../assets/background.mp4';
+import { motion } from 'framer-motion';
 
 // Import images for eye conditions
 import CataractImg from '../assets/Cataract.png';
@@ -12,9 +12,28 @@ import EyeImg from '../assets/Eye.png';
 import BlepharitisImg from '../assets/Bilaphitris.png';
 import ConjunctivitisImg from '../assets/Conjuctivis.png';
 
+// Import images for refractive errors
+import HypermetropiaImg from '../assets/Hypermetropia.png';
+import MyopiaImg from '../assets/Myopia.png';
+import AstigmatismImg from '../assets/Astigmatism.png';
+import PresbyopiaImg from '../assets/Presbyopia.png';
+import AnisometropiaImg from '../assets/Anisometropia.png';
+
+const errorImages = {
+  Hypermetropia: HypermetropiaImg,
+  Myopia: MyopiaImg,
+  Astigmatism: AstigmatismImg,
+  Presbyopia: PresbyopiaImg,
+  Anisometropia: AnisometropiaImg
+};
+
+const getErrorBgImage = (title) => {
+  return errorImages[title] || null;
+};
+
 const EyeCare = () => {
   useEffect(() => {
-    AOS.init({ duration: 500 });
+    AOS.init({ duration: 300 });
   }, []);
 
   const [showModal, setShowModal] = useState(false);
@@ -42,19 +61,24 @@ const EyeCare = () => {
   const refractiveErrors = [
     {
       title: 'Hypermetropia',
-      text: `Long sightedness. Occurs when light from a distant object focuses 'behind' the retina. A convex lens (positive powered lens) is used to re-focus the light on to the retina.`
+      text: `Farsightedness, also known as hyperopia, is a common eye condition that makes nearby objects appear blurry. It occurs when the eye doesn't bend light correctly, causing the visual image to focus behind the retina instead of on it. This can be due to the eyeball being too short or the cornea having too little curvature.`
     },
     {
       title: 'Myopia',
-      text: `Short sightedness. Occurs when light from a distant object focuses 'in front' of the retina. A concave lens (negative powered lens) is used to re-focus the light on to the retina.`
-    },
-    {
-      title: 'Presbyopia',
-      text: `A condition that affects people around age 40. Patients find it difficult to focus on close objects. A reading lens is introduced to re-focus on close objects.`
+      text: `Myopia, also known as nearsightedness, is an eye condition where light from distant objects focuses in front of the retina, instead of on it. As a result, distant objects appear blurry, while close objects appear normal. Other symptoms may include headaches and eye strain.`
     },
     {
       title: 'Astigmatism',
-      text: `An optical defect causing blurred vision due to imperfect focus. Corrected with a concave or convex astigmatic lens.`
+      text: `Astigmatism is a vision condition that occurs when the cornea or lens is irregularly shaped, preventing light from focusing correctly on the retina.`
+    },
+    {
+      title: 'Presbyopia',
+      text: `Presbyopia is a natural age-related condition where the eye's ability to focus on close objects decreases, typically starting in the mid-to-late 40s. This occurs because the lens inside the eye loses its flexibility, making it harder to adjust for near vision. While it's a normal part of aging, it can make reading and other close-up tasks challenging.`
+    },
+    {
+      title: 'Anisometropia',
+      text: `Anisometropia is a visual condition where the eyes have different refractive powers, causing one eye to appear blurrier than the other. The term comes from Greek and literally means "the measure of vision is not equal". 
+  Anisometropia occurs when the eyes focus images differently, resulting in one eye appearing blurry compared to the other. It's usually defined as a difference of one diopter or more in spherical equivalent (SE) between the eyes.`
     }
   ];
 
@@ -144,7 +168,7 @@ const EyeCare = () => {
       description: "Inflammation of the eyelid edges.",
       image: BlepharitisImg,
       details: {
-        what: "Blepharitis is inflammation of the eyelids, and it comes in two types: anterior (affecting the base of the eyelashes) and posterior (affecting the meibomian glands inside the eyelids). It is a common, often chronic condition that can lead to dry eye symptoms and eyelid discomfort, though it rarely affects vision.",
+        what: "Blepharitis is inflammation of the eyelids, coming in two types: anterior (affecting the base of the eyelashes) and posterior (affecting the meibomian glands inside the eyelids). It is a common, often chronic condition that can lead to dry eye symptoms and eyelid discomfort, though it rarely affects vision.",
         causes: "Causes include bacterial infections, skin conditions like dermatitis, gland dysfunction, allergic reactions, and exposure to smoke or chemicals. It is often diagnosed by an Optometrist or GP based on symptoms and a simple eye examination.",
         symptoms: "Symptoms include red, swollen, itchy, sore, or gritty eyelids, sensitivity to light, sticky eyelids in the morning, frothy or oily tears, and dandruff-like crusting on eyelashes. Contact lenses may become uncomfortable, and severe cases can cause blurred vision, eyelash loss, or even eyelid scarring (rarely).",
         treatment: "Treatment involves daily eyelid hygiene using dedicated lid cleansers (e.g., Blephasol, Blephaclean), warm compresses to loosen deposits, and gentle eyelid massage. Avoid eye makeup until symptoms clear. Severe or persistent cases may require antibiotics or artificial tears. Avoid sharing towels to prevent spread.",
@@ -166,34 +190,81 @@ const EyeCare = () => {
     }
   ];
 
+  // Define the hover effect to be used by all pillars
+  const hoverEffect = {
+    opacity: 1,
+    scale: 1.05,
+    boxShadow: "0px 10px 20px rgba(0,0,0,0.25)",
+    transition: { duration: 0.2 }
+  };
+
   return (
     <section className="py-5 bg-light">
       <div data-aos="fade-up" className="container my-5">
-        {/* Existing content */}
+        {/* Refractive Errors Section */}
         <div className="row justify-content-center mb-5">
-          <div className="col-lg-10">
+          <div className="col-lg-10 mx-auto">
             <h2 className="text-center mb-4 text-primary">Refractive Errors</h2>
+            
+            {/* First Row: 3 Symmetric Pillar-like Containers */}
             <div className="row g-4">
-              {refractiveErrors.map((item, idx) => (
-                <div className="col-md-6" key={idx}>
-                  <div data-aos="zoom-in-up" className="card h-100 shadow-sm border-0 rounded-4 p-3">
-                    <h5 className="fw-bold text-info text-center">{item.title}</h5>
-                    <p className="text-muted" style={{ textAlign: 'justify' }}>{item.text}</p>
-                  </div>
+              {refractiveErrors.slice(0, 3).map((item, idx) => (
+                <div key={idx} className="col-md-4">
+                  <motion.div
+                    data-aos="zoom-in-up"
+                    className="card border-0 rounded-4 overflow-hidden shadow-sm h-100"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={hoverEffect}
+                    style={{ minHeight: '400px' }}
+                  >
+                    <img
+                      src={getErrorBgImage(item.title)}
+                      alt={item.title}
+                      className="w-100"
+                      style={{ height: '220px', objectFit: 'cover' }}
+                    />
+                    <div className="p-3 d-flex flex-column">
+                      <h5 className="fw-bold text-info text-center">{item.title}</h5>
+                      <p className="text-muted" style={{ textAlign: 'justify', flexGrow: 1 }}>
+                        {item.text}
+                      </p>
+                    </div>
+                  </motion.div>
                 </div>
               ))}
-              <div data-aos="zoom-in-up" className="col-12 text-center mt-4">
-                <img
-                  src="//glenfieldopticians.co.uk/img/astigmatism.jpg"
-                  alt="Astigmatism"
-                  className="img-fluid rounded-4 shadow-sm"
-                  style={{ maxHeight: '220px' }}
-                />
-              </div>
+            </div>
+  
+            {/* Second Row: 2 Containers Centered */}
+            <div className="row g-4 justify-content-center mt-4">
+              {refractiveErrors.slice(3, 5).map((item, idx) => (
+                <div key={idx} className="col-md-4">
+                  <motion.div
+                    data-aos="zoom-in-up"
+                    className="card border-0 rounded-4 overflow-hidden shadow-sm h-100"
+                    initial={{ opacity: 0.8 }}
+                    whileHover={hoverEffect}
+                    style={{ minHeight: '400px' }}
+                  >
+                    <img
+                      src={getErrorBgImage(item.title)}
+                      alt={item.title}
+                      className="w-100"
+                      style={{ height: '220px', objectFit: 'cover' }}
+                    />
+                    <div className="p-3 d-flex flex-column">
+                      <h5 className="fw-bold text-info text-center">{item.title}</h5>
+                      <p className="text-muted" style={{ textAlign: 'justify', flexGrow: 1 }}>
+                        {item.text}
+                      </p>
+                    </div>
+                  </motion.div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-
+        
+        {/* Common Eye Conditions Section */}
         <div className="row justify-content-center">
           <div className="col-lg-10">
             <h2 className="text-center mb-4 text-primary">Common Eye Conditions</h2>
@@ -201,7 +272,12 @@ const EyeCare = () => {
               <div className="row g-4">
                 {eyeConditions.map((condition, index) => (
                   <div data-aos="zoom-in-up" className="col-sm-6 col-md-4 col-lg-3" key={index}>
-                    <div className="card h-100 shadow border-0 rounded-4 transition-hover" style={{ backgroundColor: '#fdfdfd' }}>
+                    <motion.div
+                      className="card h-100 shadow border-0 rounded-4 transition-hover"
+                      initial={{ opacity: 0.8 }}
+                      whileHover={hoverEffect}
+                      style={{ backgroundColor: '#fdfdfd' }}
+                    >
                       <img
                         src={condition.image}
                         alt={condition.title}
@@ -210,18 +286,22 @@ const EyeCare = () => {
                       />
                       <div className="card-body d-flex flex-column">
                         <h6 className="card-title text-info fw-semibold">{condition.title}</h6>
-                        <p className="card-text text-muted mb-3" style={{ fontSize: '0.85rem', textAlign: 'justify' }}>{condition.description}</p>
-                        <button onClick={() => handleShowModal(condition)} className="btn btn-outline-primary btn-sm mt-auto">Find out more</button>
+                        <p className="card-text text-muted mb-3" style={{ fontSize: '0.85rem', textAlign: 'justify' }}>
+                          {condition.description}
+                        </p>
+                        <button onClick={() => handleShowModal(condition)} className="btn btn-outline-primary btn-sm mt-auto">
+                          Find out more
+                        </button>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-
-        {/* Modal */}
+  
+        {/* Modal Section */}
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>
             <Modal.Title>{selectedCondition?.title}</Modal.Title>
