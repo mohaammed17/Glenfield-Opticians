@@ -6,9 +6,8 @@ import 'aos/dist/aos.css';
 import Testimonials from '../Components/Testimonials';
 
 import slide1 from '../assets/slide1.png';
-import slide2 from '../assets/slide2.png';
+import homevisitng from '../assets/homevisitng.png';
 import slide3 from '../assets/slide3.jpg';
-import backgroundVideo from '../assets/background.mp4';
 
 const Home = () => {
   useEffect(() => {
@@ -37,7 +36,7 @@ const Home = () => {
       path: "#about"
     },
     {
-      image: slide2,
+      image: homevisitng,
       title: "Your Home Visiting Optician",
       subtitle: "Bringing quality eyecare to your doorstep",
       button: "Book a Visit",
