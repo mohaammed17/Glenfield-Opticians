@@ -10,7 +10,7 @@ import CataractImg from '../assets/Cataract.png';
 import GlaucomaImg from '../assets/Glaucoma.png';
 import EyeImg from '../assets/Eye.png';
 import flashes from '../assets/Flashes.png';
-import macular from '../assets/Macular.png';
+import macular from '../assets/macular.png';
 import diabetic from '../assets/diabetic.png';
 import BlepharitisImg from '../assets/Bilaphitris.png';
 import ConjunctivitisImg from '../assets/Conjuctivis.png';
