@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import slide2 from '../assets/slide2.png';
+import img1 from '../assets/img1.jpg'; // new background image for Glasses & Lenses
 
 const ChildrenZone = () => {
   useEffect(() => {
@@ -16,8 +18,16 @@ const ChildrenZone = () => {
         </div>
 
         <div className="row g-4">
+          {/* "Why Children’s Eye Care Matters" card */}
           <div className="col-lg-6" data-aos="fade-right">
-            <div className="card shadow border-0 rounded-4 p-4 h-100 bg-white">
+            <div
+              className="card shadow border-0 rounded-4 p-4 h-100"
+              style={{
+                background: `linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(${slide2})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
               <h5 className="text-info fw-bold">Why Children’s Eye Care Matters</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
                 As most schools no longer offer Eye Tests, fewer children are having their eyes checked regularly. That's why we want to make it easy and affordable to ensure your child's eyes are being properly cared for.
@@ -34,8 +44,16 @@ const ChildrenZone = () => {
             </div>
           </div>
 
+          {/* "Children’s Glasses & Lenses" card */}
           <div className="col-lg-6" data-aos="fade-left">
-            <div className="card shadow border-0 rounded-4 p-4 h-100 bg-white">
+            <div
+              className="card shadow border-0 rounded-4 p-4 h-100"
+              style={{
+                background: `linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(${img1})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
               <h5 className="text-info fw-bold">Children’s Glasses & Lenses</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
                 All of our frames offer exceptional durability and comfort, not to mention features like sprung hinges and memory metals.
