@@ -167,6 +167,18 @@ const EyeCare = () => {
     },
 
     {
+      title: "Diabetic Retinopathy",
+      description: "High blood sugar damaging back eye cells.",
+      image: diabetic,
+      details: {
+        what: "Diabetic Retinopathy is a diabetes-related condition where high blood sugar damages the small blood vessels in the retina, potentially leading to vision loss or blindness. It is a complication of diabetes mellitus and can affect up to 80% of those with diabetes for 10 years or more.",
+        causes: "Caused by prolonged high blood glucose levels that weaken and damage retinal blood vessels, leading to hemorrhages, fluid leaks, swelling (macular edema), and growth of abnormal vessels due to lack of oxygen. Good diabetes control significantly reduces the risk.",
+        symptoms: "Early stages may have no symptoms. As it progresses, symptoms include blurred or fluctuating vision, eye floaters and spots, double vision, dark areas in vision, and in some cases, eye pain. Macular edema can cause noticeable vision loss.",
+        treatment: "Early detection is key. Regular eye exams help catch it early. Treatments include laser therapy to seal leaking vessels, anti-VEGF injections to stop abnormal vessel growth, and managing blood sugar levels effectively. Advanced stages are harder to treat.",
+        expectation: "It requires lifelong diabetes management and regular eye checkups. Vision loss may occur if not treated promptly. Macular edema can come and go, causing vision changes throughout the day. In the UK, diabetics are eligible for free annual eye exams through the NHS."
+      }
+    },
+    {
       title: "Macular Degeneration",
       description: "Causes loss of central vision.",
       image: macular,
@@ -178,19 +190,6 @@ const EyeCare = () => {
         expectation: "AMD is progressive and can lead to significant vision loss, especially if untreated. Regular eye exams are crucial for early detection. If AMD is diagnosed, you may be referred to an ophthalmologist for further tests like fluorescein angiography to examine blood vessels in the eye."
       }
     },
-
-    {
-      title: "Diabetic Retinopathy",
-      description: "High blood sugar damaging back eye cells.",
-      image: diabetic,
-      details: {
-        what: "Diabetic Retinopathy is a diabetes-related condition where high blood sugar damages the small blood vessels in the retina, potentially leading to vision loss or blindness. It is a complication of diabetes mellitus and can affect up to 80% of those with diabetes for 10 years or more.",
-        causes: "Caused by prolonged high blood glucose levels that weaken and damage retinal blood vessels, leading to hemorrhages, fluid leaks, swelling (macular edema), and growth of abnormal vessels due to lack of oxygen. Good diabetes control significantly reduces the risk.",
-        symptoms: "Early stages may have no symptoms. As it progresses, symptoms include blurred or fluctuating vision, eye floaters and spots, double vision, dark areas in vision, and in some cases, eye pain. Macular edema can cause noticeable vision loss.",
-        treatment: "Early detection is key. Regular eye exams help catch it early. Treatments include laser therapy to seal leaking vessels, anti-VEGF injections to stop abnormal vessel growth, and managing blood sugar levels effectively. Advanced stages are harder to treat.",
-        expectation: "It requires lifelong diabetes management and regular eye checkups. Vision loss may occur if not treated promptly. Macular edema can come and go, causing vision changes throughout the day. In the UK, diabetics are eligible for free annual eye exams through the NHS."
-      }
-    }
   ];
 
   // Define the hover effect to be used by all pillars

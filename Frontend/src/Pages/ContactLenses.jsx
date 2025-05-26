@@ -30,13 +30,13 @@ const ContactLenses = () => {
                 backgroundColor: "rgba(255,255,255,0.4)"
               }}
             >
-              <div className="card-body" style={{ color: "#333" }}>
+              <div className="card-body" style={{ color: "#111", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)" }}>
                 <p style={{ textAlign: "justify" }}>
                   We offer contact lens consultations for new fittings and aftercare for existing contact lens wearers.
                 </p>
 
-                <h5 className="fw-bold mt-4 text-info" style={{ color: "#222" }}>We provide all varieties of lenses:</h5>
-                <ul style={{ textAlign: "justify", color: "#333" }}>
+                <h5 className="fw-bold mt-4 text-info" style={{ color: "#111" }}>We provide all varieties of lenses:</h5>
+                <ul style={{ textAlign: "justify", color: "#111" }}>
                   <li>Conventional yearly lenses</li>
                   <li>Monthly disposable lenses</li>
                   <li>Biweekly disposable lenses</li>
@@ -44,8 +44,8 @@ const ContactLenses = () => {
                   <li>Soft coloured cosmetic lenses</li>
                 </ul>
 
-                <h5 className="fw-bold mt-4 text-info" style={{ color: "#222" }}>We sell:</h5>
-                <ul style={{ textAlign: "justify", color: "#333" }}>
+                <h5 className="fw-bold mt-4 text-info" style={{ color: "#111" }}>We sell:</h5>
+                <ul style={{ textAlign: "justify", color: "#111" }}>
                   <li>Single vision</li>
                   <li>Toric lenses (for astigmatism)</li>
                   <li>Progressive contact lenses</li>
