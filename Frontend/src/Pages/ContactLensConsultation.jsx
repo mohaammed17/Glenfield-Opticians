@@ -18,7 +18,8 @@ const ContactLensConsultation = () => {
           <div className="col-lg-10">
             <div className="card border-0 shadow rounded-4 p-4 bg-white">
               <div className="row">
-                <div className="col-md-7">
+                {/* Text Column */}
+                <div className="col-md-7 col-12">
                   <p className="text-muted" style={{ textAlign: 'justify' }}>
                     Thinking about the freedom of contact lenses—or simply want a health check on the pair you already wear? Our full contact-lens service slots in right after your routine eye exam and covers everything you need for crystal-clear, comfortable vision:
                   </p>
@@ -41,11 +42,20 @@ const ContactLensConsultation = () => {
                     Book your contact-lens visit today and see the world with clarity and confidence.
                   </p>
                 </div>
-                <div className="col-md-5 d-flex align-items-center">
+                {/* Image Column */}
+                <div className="col-md-5 col-12 d-flex align-items-center justify-content-md-end justify-content-center mt-4 mt-md-0">
                   <img 
                     src={contactLensMap} 
                     alt="Contact lens consultation steps" 
-                    className="img-fluid rounded" 
+                    className="img-fluid rounded shadow"
+                    loading="lazy"
+                    style={{ 
+                      maxHeight: '500px', 
+                      objectFit: 'cover',
+                      transition: 'opacity 0.5s ease-in-out',
+                      opacity: 0 
+                    }}
+                    onLoad={(e) => (e.target.style.opacity = 1)}
                   />
                 </div>
               </div>

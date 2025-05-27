@@ -55,7 +55,14 @@ const DispensingOfEyeglasses = () => {
                   src={dispensingJourney} 
                   alt="Spectacles Dispensing Journey" 
                   className="img-fluid rounded shadow"
-                  style={{ maxHeight: '500px', objectFit: 'cover' }}
+                  loading="lazy"
+                  style={{ 
+                    maxHeight: '500px', 
+                    objectFit: 'cover',
+                    transition: 'opacity 0.5s ease-in-out', 
+                    opacity: 0 
+                  }}
+                  onLoad={(e) => e.target.style.opacity = 1}
                 />
               </div>
             </div>
