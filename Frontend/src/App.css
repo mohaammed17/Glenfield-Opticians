@@ -271,6 +271,12 @@ section h2 {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+.service-item {
+  transition: transform 0.3s ease-in-out;
+}
+.service-item:hover {
+  transform: translateY(-5px);
+}
 
 /* CTA Section */
 .cta-section {

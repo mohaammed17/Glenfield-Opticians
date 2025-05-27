@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import brandGraphic from '../assets/mustafa-eye.jpeg';
 
 const FreeEyeTestService = () => {
   useEffect(() => {
@@ -10,12 +11,29 @@ const FreeEyeTestService = () => {
   return (
     <section className="py-5 bg-light">
       <div className="container">
+        {/* Section Heading */}
         <div className="text-center mb-5" data-aos="fade-down">
           <h2 className="fw-bold text-primary">Free Eye Test</h2>
           <p className="lead text-muted">Check your eligibility for a free NHS sight test</p>
         </div>
 
-        <div className="row g-4">
+        {/* Comprehensive Eye Examination Section */}
+        <div className="row mb-5" data-aos="zoom-in">
+          <div className="col-lg-10 mx-auto">
+            <div className="card border-0 shadow rounded-4 p-4 bg-white">
+              <h5 className="text-info fw-bold mb-3">Comprehensive Eye Examination</h5>
+              <p className="text-muted" style={{ textAlign: 'justify' }}>
+                We provide a comprehensive eye examination using state of the art equipments, carried out by a competent friendly practioner with over 30 years of experience.
+                The eye tests include taking a detailed history and symptoms, and tests for muscle balance, pupil reflex, external eye health, internal retinal health, colour vision, stereopsis, eye pressures, visual fields, and vision check for glasses.
+                This is then followed by an outcome discussion and advice.
+                A printed copy of the eye examination outcome that includes a spectacle prescription is given to the patient.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Free Eye Test Eligibility Sections */}
+        <div className="row g-4 mb-5">
           <div className="col-lg-6" data-aos="fade-right">
             <div className="card border-0 shadow rounded-4 h-100 p-4 bg-white">
               <h5 className="text-info fw-bold mb-3">You qualify for a free NHS sight test if:</h5>
@@ -26,9 +44,7 @@ const FreeEyeTestService = () => {
                 <li>You claim benefits such as Universal Credit, Working Tax Credit, Pension Credit, Guarantee Credit, or Employment and Support Allowance.</li>
                 <li>You're registered as blind or partially sighted</li>
                 <li>You have diabetes or glaucoma</li>
-                <li>
-                  You're 40+ and a close relative has been diagnosed with glaucoma
-                </li>
+                <li>You're 40+ and a close relative has been diagnosed with glaucoma</li>
                 <li>You've been advised by an ophthalmologist you're at risk of glaucoma</li>
                 <li>You're a prisoner on leave from prison</li>
                 <li>You're eligible for an NHS complex lens voucher</li>
@@ -39,44 +55,41 @@ const FreeEyeTestService = () => {
           <div className="col-lg-6" data-aos="fade-left">
             <div className="card border-0 shadow rounded-4 h-100 p-4 bg-white">
               <h5 className="text-info fw-bold mb-3">
-                You're also entitled to free sight tests & help with glasses if:
+                You're also entitled to free sight tests &amp; help with glasses if:
               </h5>
               <ul className="text-muted small" style={{ textAlign: 'justify' }}>
                 <li>You're under 16 or under 19 in full-time education</li>
                 <li>You receive Pension Credit Guarantee Credit</li>
-                <li>
-                  You receive income-based Employment and Support Allowance
-                </li>
+                <li>You receive income-based Employment and Support Allowance</li>
                 <li>You hold a valid NHS tax credit exemption certificate</li>
-                <li>
-                  You're named on a valid NHS certificate for full help with health costs (HC2)
-                </li>
-                <li>
-                  If you're named on an HC3 certificate, partial help may still be available
-                </li>
+                <li>You're named on a valid NHS certificate for full help with health costs (HC2)</li>
+                <li>If you're named on an HC3 certificate, partial help may still be available</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="row mt-5" data-aos="zoom-in">
+        {/* Private Eye Tests Also Available Section */}
+        <div className="row mb-5" data-aos="zoom-in">
           <div className="col-lg-10 mx-auto">
             <div className="card border-0 shadow rounded-4 p-4 bg-white">
               <h5 className="text-info fw-bold mb-3">Private Eye Tests Also Available</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We also offer  private eye examinations, new contact lens fitting consultations, and after-care services for contact lens wearers.
-                Our eye examination also include the OCT.
+                We also offer private eye examinations, new contact lens fitting consultations, and after-care services for contact lens wearers.
+                Our eye examination also includes the OCT.
               </p>
-             
-              <div className="text-center">
-                <a href="/book-appointment" className="btn btn-primary px-4">
-                  Book Appointment
-                </a>
-              </div>
             </div>
           </div>
         </div>
 
+        {/* Unified Book Appointment Button */}
+        <div className="row" data-aos="zoom-in">
+          <div className="col-lg-10 mx-auto text-center">
+            <a href="/book-appointment" className="btn btn-primary px-4">
+              Book Appointment
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

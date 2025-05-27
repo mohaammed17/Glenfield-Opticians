@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import slide1 from '../assets/slide1.png';
 import homevisitng from '../assets/homevisitng.png';
 import slide3 from '../assets/slide3.jpg';
+import brandGraphic from '../assets/mustafa-eye.jpeg';
 
 const Home = () => {
   useEffect(() => {
@@ -49,6 +50,13 @@ const Home = () => {
       subtitle: "One-month free trial for new users",
       button: "Get Trial",
       path: "/book-appointment"
+    },
+    {
+      image: brandGraphic,
+      title: "Glenfield Opticians",
+      subtitle: "Your local community optometrist dedicated to looking after your eyes.",
+      button: "Our Services",
+      path: "#services"  // Changed target here
     }
   ];
 
@@ -123,9 +131,9 @@ const Home = () => {
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8 mb-4">
             <div data-aos="zoom-in-up" className="card h-100 shadow-sm border-0 rounded-4 p-3">
-              <h5 className="fw-bold text-info text-center">About Us</h5>
+              <h5 className="fw-bold text-info text-center">  About Us</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We are an independent opticians located in Glenfield, Leicester. We pride ourselves on providing a professional, personal, and friendly service to the community – something not always possible at regular high street practices. Whether you require spectacles or not, we are committed to delivering the highest level of eye care.
+                We are an independent opticians in Glenfield, Leicester dedicated to look after your eyes since 2009. We pride ourselves on being able to provide a professional, personal and friendly service to the community, which may not always be possible at regular high street practices. Whether you require spectacles or not, we are committed to providing the highest level of eye care. We provide private eye care and have been awarded a contract by the National Health services (NHS) to provide NHS funded eyecare services.
               </p>
             </div>
           </div>
@@ -180,39 +188,99 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="services-section py-5">
+      {/* Our Services Section */}
+      <section id="services" className="services-section py-5">
         <div data-aos="zoom-in-up" className="container">
           <h2 className="text-center mb-4">Our Services</h2>
           <div className="row">
-            <div className="col-md-4 text-center">
+            <div className="col-md-3 mb-4">
               <Link to="/freeeyetest" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <i className="bi bi-eyeglasses fs-1 text-primary"></i>
-                <h5>Eye Tests</h5>
-                <p>Comprehensive eye tests at your home or in-clinic.</p>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-eyeglasses fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Eye Tests</h5>
+                    <p className="card-text">Comprehensive eye tests at your home or in-clinic.</p>
+                  </div>
+                </div>
               </Link>
             </div>
-            <div className="col-md-4 text-center">
+            <div className="col-md-3 mb-4">
               <Link to="/home-visit" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <i className="bi bi-house-door fs-1 text-primary"></i>
-                <h5>Home Visits</h5>
-                <p>We bring quality care to your doorstep.</p>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-house-door fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Home Visits</h5>
+                    <p className="card-text">We bring quality care to your doorstep.</p>
+                  </div>
+                </div>
               </Link>
             </div>
-            <div className="col-md-4 text-center">
+            <div className="col-md-3 mb-4">
               <Link to="/corporate-eye-care" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <i className="bi bi-laptop fs-1 text-primary"></i>
-                <h5>Corporate Eye Care</h5>
-                <p>On-site eye care services for companies and employees.</p>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-laptop fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Corporate Eye Care</h5>
+                    <p className="card-text">On-site eye care services for companies and employees.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 mb-4">
+              <Link to="/hearing-test" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-ear fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Hearing Test</h5>
+                    <p className="card-text">Professional hearing assessments by specialists.</p>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
-          <div className="row mt-4">
-            <div className="col-md-4 offset-md-4 text-center">
-              <Link to="/hearing-test" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <i className="bi bi-ear fs-1 text-primary"></i>
-                <h5>Hearing Test</h5>
-                <p>Professional hearing assessments by specialists.</p>
+          <div className="row">
+            <div className="col-md-3 mb-4">
+              <Link to="/dispensingofeyeglasses" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-bag fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Dispensing of Eye Glasses</h5>
+                    <p className="card-text">Choose from over 500 frames with expert guidance.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 mb-4">
+              <Link to="/cataract-and-other-referrals" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-hospital fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Cataract & Other Referrals</h5>
+                    <p className="card-text">Direct referrals to hospital without GP involvement.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 mb-4">
+              <Link to="/contact-lens-consultation" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-eye fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Contact Lens Consultation</h5>
+                    <p className="card-text">Thorough testing and training for contact lenses.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="col-md-3 mb-4">
+              <Link to="/sale-of-optical-product" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-shop fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Sale of Optical Product</h5>
+                    <p className="card-text">A wide range of frames, lenses, and accessories.</p>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>

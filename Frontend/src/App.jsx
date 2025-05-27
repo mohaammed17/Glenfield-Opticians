@@ -1,4 +1,4 @@
- import './App.css';
+import './App.css';
 import React from 'react';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -19,6 +19,11 @@ import FreedomOfInformation from './Pages/FreedomOfInformation';
 import TermsAndConditions from './Pages/TermsAndConditions';
 import BookAppointment from './Pages/BookAppointment';
 import ScrollToTop from './Components/ScrollToTop';
+import DispensingOfEyeglasses from './Pages/DispensingOfEyeglasses';
+import CataractAndOtherReferrals from './Pages/CataractAndOtherReferrals';
+import ContactLensConsultation from './Pages/ContactLensConsultation';
+import SaleOfOpticalProduct from './Pages/SaleOfOpticalProduct';
+
 function App() {
   return (
     <div className="app-wrapper">
@@ -30,9 +35,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/eyecare" element={<EyeCare />} />
           <Route path="/contactlenses" element={<ContactLenses />} />
-          <Route path="/specialoffers" element={<SpecialOffers/>} />
-          <Route path="/childrenzone" element={<ChildrenZone/>} />
-          <Route path="/freeeyetest" element={<FreeEyeTestService/>} />
+          <Route path="/specialoffers" element={<SpecialOffers />} />
+          <Route path="/childrenzone" element={<ChildrenZone />} />
+          <Route path="/freeeyetest" element={<FreeEyeTestService />} />
           <Route path="/corporate-eye-care" element={<CorporateEyeCare />} />
           <Route path="/home-visit" element={<HomeVisit />} />
           <Route path="/hearing-test" element={<HearingTest />} />
@@ -40,9 +45,10 @@ function App() {
           <Route path="/freedom-of information" element={<FreedomOfInformation />} />
           <Route path="/terms-& Conditions" element={<TermsAndConditions />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
-
-
-
+          <Route path="/dispensingofeyeglasses" element={<DispensingOfEyeglasses />} />
+          <Route path="/cataract-and-other-referrals" element={<CataractAndOtherReferrals />} />
+          <Route path="/contact-lens-consultation" element={<ContactLensConsultation />} />
+          <Route path="/sale-of-optical-product" element={<SaleOfOpticalProduct />} />
         </Routes>
       </main>
       <Footer />

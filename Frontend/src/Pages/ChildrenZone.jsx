@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import slide2 from '../assets/slide2.png';
-import img1 from '../assets/img1.jpg'; // new background image for Glasses & Lenses
+import img1 from '../assets/img1.jpg'; // background image for Glasses & Lenses
+import mustafaKid from '../assets/mustafa-kid.jpeg'; // new promotional image
 
 const ChildrenZone = () => {
   useEffect(() => {
@@ -90,8 +91,31 @@ const ChildrenZone = () => {
               </div>
             </div>
           </div>
-          
         </div>
+        
+        {/* New Promotional Block */}
+        <div data-aos="fade-up" className="mt-5 p-4 border rounded bg-white shadow-sm">
+          <div className="row align-items-center">
+            <div className="col-md-8">
+              <h2 className="text-primary fw-bold">Don't Underestimate Your Child's Eyecare</h2>
+              <p className="lead text-muted">
+                A bright smile begins with great vision. Ensure your child’s eyes are well cared for – book a sight test today!
+              </p>
+              <p className="fs-4 fw-bold">
+                Call: <span style={{ color: '#0d6efd' }}>0116 287 4357</span>
+              </p>
+            </div>
+            <div className="col-md-4">
+              <img 
+                src={mustafaKid} 
+                alt="Child with eyeglasses" 
+                className="img-fluid rounded" 
+                style={{ maxHeight: '350px', objectFit: 'cover' }}
+              />
+            </div>
+          </div>
+        </div>
+        
       </div>
     </section>
   );

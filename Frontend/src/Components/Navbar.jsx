@@ -95,16 +95,48 @@ function Navbar() {
                 </motion.a>
                 <ul className="dropdown-menu">
                   <li>
-                    <NavLink to="/freeeyetest" className="dropdown-item" onClick={handleNavLinkClick}>Eye Examination</NavLink>
+                    <NavLink to="/freeeyetest" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Eye Examination
+                    </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/corporate-eye-care" className="dropdown-item" onClick={handleNavLinkClick}>Corporate Eye Care</NavLink>
+                    <NavLink to="/dispensingofeyeglasses" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Dispensing of Eye Glasses
+                    </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/home-visit" className="dropdown-item" onClick={handleNavLinkClick}>Home Visit</NavLink>
+                    <NavLink to="/corporate-eye-care" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Corporate Eye Care
+                    </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/hearing-test" className="dropdown-item" onClick={handleNavLinkClick}>Hearing Test</NavLink>
+                    <NavLink to="/home-visit" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Home Visit
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/hearing-test" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Hearing Test
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/cataract-and-other-referrals"
+                      className="dropdown-item"
+                      onClick={handleNavLinkClick}
+                    >
+                      Cataract & Other Referrals
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/contact-lens-consultation" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Contact Lens Consultation
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/sale-of-optical-product" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Sale of Optical Product
+                    </NavLink>
                   </li>
                 </ul>
               </li>

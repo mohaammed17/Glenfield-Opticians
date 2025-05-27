@@ -8,8 +8,9 @@ const CorporateEyeCare = () => {
       <div className="container">
         <div className="row justify-content-center animate__animated animate__fadeInUp">
           <div className="col-lg-10">
+            {/* Heading moved outside of the white card */}
+            <h2 className="text-center text-primary fw-bold mb-4">Corporate Eyecare Plans</h2>
             <div className="card shadow border-0 rounded-4 p-4">
-              <h2 className="text-center text-primary fw-bold mb-4">Corporate Eyecare Plans</h2>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
                 Allow your business to see clearly.
               </p>
@@ -31,7 +32,6 @@ const CorporateEyeCare = () => {
                 Please contact us on <strong ><a href="tel:01162874357">0116 2874357</a></strong> for further information on how Glenfield Opticians can work with your company,
                 or email us at <a href="mailto:info@glenfieldopticians.co.uk">info@glenfieldopticians.co.uk</a>.
               </p>
-
               <div className="text-center mt-4">
                 <Link to="/book-appointment" className="btn btn-primary px-4 py-2 rounded-pill shadow-sm">
                   Book Appointment
