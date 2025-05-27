@@ -22,6 +22,28 @@ const DispensingOfEyeglasses = () => {
             </div>
           </div>
         </div>
+        <div className="row mt-5" data-aos="fade-up">
+          <div className="col-lg-10 mx-auto">
+            <div className="card border-0 shadow rounded-4 p-4 bg-white">
+              <h5 className="text-info fw-bold mb-3">Why Choose Our Dispensing Service?</h5>
+              <ul className="text-muted" style={{ textAlign: 'justify' }}>
+                <li>Expert guidance from qualified dispensing opticians.</li>
+                <li>Access to over 500 high-quality frames from leading brands.</li>
+                <li>Personalised fittings, including a photography session to preview your look.</li>
+                <li>Accurate measurements for a perfect fit.</li>
+                <li>Comprehensive after-care and follow-up support.</li>
+              </ul>
+              <p className="mt-3 text-muted" style={{ textAlign: 'justify' }}>
+                We ensure every patient leaves with glasses that not only suit their prescription but also enhance their style and confidence. Experience our professional dispensing service today.
+              </p>
+              <div className="text-center mt-4">
+                <a href="/book-appointment" className="btn btn-primary px-4">
+                  Book Your Appointment
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
