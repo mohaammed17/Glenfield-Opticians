@@ -54,9 +54,9 @@ const Home = () => {
     {
       image: brandGraphic,
       title: "Glenfield Opticians",
-      subtitle: "Your local community optometrist dedicated to looking after your eyes.",
+      subtitle: "Your local community optometrist dedicated to looking after your eyes.<br/>Dedicated to look after your eyes.",
       button: "Our Services",
-      path: "#services"  // Changed target here
+      path: "#services"
     }
   ];
 
@@ -103,7 +103,7 @@ const Home = () => {
                   <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="carousel-content text-center">
                       <h1 className="text-white fw-bold">{slide.title}</h1>
-                      <p className="text-light fs-5">{slide.subtitle}</p>
+                      <p className="text-light fs-5" dangerouslySetInnerHTML={{ __html: slide.subtitle }} />
                       <a href={slide.path} className="btn btn-primary mt-3">
                         {slide.button}
                       </a>
