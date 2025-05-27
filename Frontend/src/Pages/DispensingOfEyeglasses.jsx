@@ -28,8 +28,8 @@ const DispensingOfEyeglasses = () => {
         <div className="row mt-5" data-aos="fade-up">
           <div className="col-lg-10 mx-auto">
             <div className="row">
-              {/* Make the text column a bit wider */}
-              <div className="col-md-7">
+              {/* Make the text column responsive */}
+              <div className="col-md-7 col-12">
                 <div className="card border-0 shadow rounded-4 p-4 bg-white h-100">
                   <h5 className="text-info fw-bold mb-3">Why Choose Our Dispensing Service?</h5>
                   <ul className="text-muted" style={{ textAlign: 'justify' }}>
@@ -49,8 +49,8 @@ const DispensingOfEyeglasses = () => {
                   </div>
                 </div>
               </div>
-              {/* Make the image column narrower and push the image to the right */}
-              <div className="col-md-5 d-flex align-items-center justify-content-end">
+              {/* Make the image column responsive and center on mobile */}
+              <div className="col-md-5 col-12 d-flex align-items-center justify-content-md-end justify-content-center mt-4 mt-md-0">
                 <img 
                   src={dispensingJourney} 
                   alt="Spectacles Dispensing Journey" 
