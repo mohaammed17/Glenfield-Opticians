@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import contactLensMap from '../assets/contactlens.png';
 
 const ContactLensConsultation = () => {
   useEffect(() => {
@@ -16,13 +17,38 @@ const ContactLensConsultation = () => {
         <div className="row justify-content-center" data-aos="zoom-in">
           <div className="col-lg-10">
             <div className="card border-0 shadow rounded-4 p-4 bg-white">
-              <p className="text-muted" style={{ textAlign: 'justify' }}>
-                If you are interested in trying contact lenses or having a check on your existing lenses, then a thorough test for this follows the eye examination.
-                More measurements of the front of the eye are taken, and more tests of the external eye are done which include a dry eye test and yellow dye test.
-                Trial contact lenses are put in the eye and the vision is tested.
-                A teach on how to put the lenses in the eye and how to take them out is carried out.
-                A printed copy of your contact lens specification is given.
-              </p>
+              <div className="row">
+                <div className="col-md-7">
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    Thinking about the freedom of contact lenses—or simply want a health check on the pair you already wear? Our full contact-lens service slots in right after your routine eye exam and covers everything you need for crystal-clear, comfortable vision:
+                  </p>
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    <strong>Precision Mapping</strong> – We take detailed corneal measurements and assess your tear film to ensure a flawless lens fit.
+                  </p>
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    <strong>Ocular Health Checks</strong> – A dry-eye screen and fluorescein (yellow dye) test let us spot any surface issues before they become problems.
+                  </p>
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    <strong>Real-World Trial</strong> – Trial lenses are inserted on the spot so you can experience the sharpness and comfort first-hand while we fine-tune your prescription.
+                  </p>
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    <strong>Hands-On Training</strong> – You’ll practise safe insertion and removal techniques under expert guidance until you’re completely confident.
+                  </p>
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    <strong>Take-Home Specs</strong> – Leave with a printed copy of your personalised contact-lens prescription and care instructions—ready to order whenever you choose.
+                  </p>
+                  <p className="text-muted" style={{ textAlign: 'justify' }}>
+                    Book your contact-lens visit today and see the world with clarity and confidence.
+                  </p>
+                </div>
+                <div className="col-md-5 d-flex align-items-center">
+                  <img 
+                    src={contactLensMap} 
+                    alt="Contact lens consultation steps" 
+                    className="img-fluid rounded" 
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
