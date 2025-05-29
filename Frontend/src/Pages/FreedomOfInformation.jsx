@@ -89,7 +89,7 @@ const FreedomOfInformation = () => {
 
               <h5 className="text-info fw-bold mt-4">Financial and Funding Information</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                Glenfield Opticians currently receive £21.31 for each NHS sight test performed in the UK. However, the sight test fees in Northern Ireland, Scotland and Wales differ.
+                Glenfield Opticians currently receive £23.53 for each NHS sight test performed in the UK. However, the sight test fees in Northern Ireland, Scotland and Wales differ.
                 <br />
                 Please refer to the websites shown below for up to date information on this subject. Your local Glenfield Opticians can inform you of the current cost of an eye test for those who do not qualify for NHS assistance.
                 <br />If you would like further information about the value of the NHS vouchers accepted by your local Glenfield Opticians and NHS charges please visit:<br></br>

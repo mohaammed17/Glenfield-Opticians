@@ -56,14 +56,41 @@ const PrivacyPolicy = () => {
         </ul>
         <p className="text-muted" style={{ textAlign: 'justify' }}>If you do not register as a customer but wish to email Glenfield Optician’s through the Website (info@glenfieldopticians.co.uk) you will be providing us with personal information about yourself, including your email address, name and contact details. This may include medical information. You may also be required to supply personal information (but not medical information) through the Website for entering a Glenfield Optician’s competition. We will only use such information for the purposes of providing a reply, reviewing any feedback or improving the Website. Such processing may include the purposes set out in Clause 5 (of this Privacy Policy) and transferring the personal information to our offices in Guernsey.</p>
         <p className="text-muted" style={{ textAlign: 'justify' }}>If you are simply browsing our Website we will not collect any personal information which will identify you however, we will collect information using cookies and/or traffic data which uses IP addresses or other numeric identifiers which analyse navigation and use of the Website.</p>
-        <p className="text-muted" style={{ textAlign: 'justify' }}>Personal information collected will be retained by the Group for as long as is reasonably necessary (or as defined under applicable healthcare laws and regulations) to provide products and services (including after sales service) to you</p>
-        <h5 className="text-info fw-bold">4 - Cookies and Traffic Data</h5>
+        <p className="text-muted" style={{ textAlign: 'justify' }}>
+          Personal information collected will be retained by the Group for as long as is reasonably necessary (or as defined under applicable healthcare laws and regulations) to provide products and services (including after sales service) to you
+        </p>
+
+        {/* New Section inserted after Section 3 */}
+        <h5 className="text-info fw-bold">4 – General Data Protection Regulation (GDPR) Compliance</h5>
+        <p className="text-muted" style={{ textAlign: 'justify' }}>
+          We are committed to ensuring that your personal data is handled in accordance with the rights and obligations under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. This includes ensuring transparency in how we collect, use, store, and share your information.
+        </p>
+        <p className="text-muted" style={{ textAlign: 'justify' }}>
+          Under the GDPR, you have the right to:
+        </p>
+        <ul className="text-muted" style={{ textAlign: 'justify' }}>
+          <li>Be informed about how your personal data is being used.</li>
+          <li>Access the personal data we hold about you.</li>
+          <li>Request correction of inaccurate or incomplete data.</li>
+          <li>Request deletion of your data (also known as the "right to be forgotten") where applicable.</li>
+          <li>Restrict the processing of your data in certain circumstances.</li>
+          <li>Object to the processing of your data for marketing or profiling purposes.</li>
+          <li>Request data portability, allowing you to obtain and reuse your personal data for your own purposes across different services.</li>
+          <li>Withdraw your consent at any time, where processing is based on consent.</li>
+        </ul>
+        <p className="text-muted" style={{ textAlign: 'justify' }}>
+          We ensure appropriate technical and organisational measures are in place to protect your data, and any third parties processing data on our behalf are contractually obligated to handle it with the same level of protection.
+        </p>
+
+        <h5 className="text-info fw-bold">5 - Cookies and Traffic Data</h5>
         <p className="text-muted" style={{ textAlign: 'justify' }}>
          Glenfield Optician’s uses cookies in a number of ways to improve the operation of our website and make the use of it much smoother.
         </p>
 
-        <h5 className="text-info fw-bold">5 - Disclosure to Third Parties</h5>
-        <p className="text-muted" style={{ textAlign: 'justify' }}>We will not pass your personal information to anyone outside of the Group, without your prior consent, except the following:</p>
+        <h5 className="text-info fw-bold">6 - Disclosure to Third Parties</h5>
+        <p className="text-muted" style={{ textAlign: 'justify' }}>
+          We will not pass your personal information to anyone outside of the Group, without your prior consent, except the following:
+        </p>
         <ul className="text-muted" style={{ textAlign: 'justify' }}>
           <li>Health authorities including NHS or national equivalent bodies</li>
           <li>Third party service providers for the purpose of fulfilling your order</li>
@@ -72,24 +99,27 @@ const PrivacyPolicy = () => {
           <li>Where we are otherwise legally required to do so (for example to the Inland Revenue, Benefits Agency, any court of competent jurisdiction or any law enforcement agency with statutory authority)</li>
         </ul>
 
-        <h5 className="text-info fw-bold">6 - Updating, Accessing or Removing Personal Information</h5>
+        <h5 className="text-info fw-bold">7 - Updating, Accessing or Removing Personal Information</h5>
         <p className="text-muted" style={{ textAlign: 'justify' }}>
           You can amend or remove your personal details either by signing in to Your Account (if you are a registered online customer) or notifying info@glenfieldopticians.co.uk. You are entitled at law to request us whether we hold any of your personal information and, if so, to request a copy of it. If you wish to exercise your data subject access rights, please contact us with sufficient information to verify your identity and the personal information you require. We reserve the right to charge £10 for complying with a subject access rights and shall provide such information within 40 days of your request.
         </p>
 
-        <h5 className="text-info fw-bold">7 - Marketing Material</h5>
+        <h5 className="text-info fw-bold">8 - Marketing Material</h5>
         <p className="text-muted" style={{ textAlign: 'justify' }}>
           We may use your personal information to contact you in relation to healthcare related products and services offered by the Group. To ensure you continue to receive excellent healthcare, Glenfield Optician’s will send you non-marketing material such as appointment reminders and notices to remind you of the expiration of your current prescription.
         </p>
-        <p className="text-muted" style={{ textAlign: 'justify' }}>You can opt out of receiving any email marketing material from the Group by removing your consent at any time either by signing in to Your Account or notifying info@glenfieldopticians.co.uk . Having opted in to receive email marketing material you will always be provided with an opportunity to opt out on each such communication.</p>
-        <h5 className="text-info fw-bold">8 - Disclaimer</h5>
+        <p className="text-muted" style={{ textAlign: 'justify' }}>
+          You can opt out of receiving any email marketing material from the Group by removing your consent at any time either by signing in to Your Account or notifying info@glenfieldopticians.co.uk. Having opted in to receive email marketing material you will always be provided with an opportunity to opt out on each such communication.
+        </p>
+
+        <h5 className="text-info fw-bold">9 - Disclaimer</h5>
         <p className="text-muted" style={{ textAlign: 'justify' }}>
           We are committed to protecting the security of your personal information. We use a variety of security technologies and procedures to help protect your personal information from unauthorised access and use. As effective as modern security practices are, no physical or electronic security system is entirely secure. We cannot guarantee the complete security of our database, nor can we guarantee that information you supply will not be intercepted while being transmitted to us over the Internet. Any transmission is at your own risk. In the event that there is an interception of your personal information or unauthorised access or use of our database, we will not be liable or responsible for any resulting misuse of your personal information.
 
 <br></br>We have no control over the contents of third party sites or resources which are linked to the Website and we accept no responsibility or liability for them or the privacy practices they use or for any loss or damage that may arise from your use of such websites or resources.
         </p>
 
-        <h5 className="text-info fw-bold">9 - Updating Our Privacy Statement</h5>
+        <h5 className="text-info fw-bold">10 - Updating Our Privacy Statement</h5>
         <p className="text-muted" style={{ textAlign: 'justify' }}>
           We may update this Privacy Statement from time to time in our sole discretion and, in such event, we will post a clear message on our Website. By continuing to use the Website after we post notification of any such changes, you accept and agree to this Privacy Statement as modified.
         </p>
@@ -101,7 +131,7 @@ const PrivacyPolicy = () => {
           <strong>Email:</strong> info@glenfieldopticians.co.uk
         </p>
 
-        <p className="text-muted mt-3 mb-0">Last updated: 1 May 2012</p>
+        <p className="text-muted mt-3 mb-0">Last updated: 1 June 2025</p>
         <p className="text-muted mb-0">© Glenfield Eyecare Limited 2012. All rights reserved.</p>
       </div>
     </div>

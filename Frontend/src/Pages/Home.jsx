@@ -10,6 +10,8 @@ import slide1 from '../assets/slide1.png';
 import homevisitng from '../assets/homevisitng.png';
 import slide3 from '../assets/slide3.jpg';
 import brandGraphic from '../assets/mustafa-eye.jpeg';
+import blueBlock from '../assets/bluelock.jpeg';  // Blue Block main image
+import photofun from '../assets/photofun.jpeg';     // Second image for Blue Block slide
 
 const Home = () => {
   useEffect(() => {
@@ -26,7 +28,7 @@ const Home = () => {
           pause: 'hover'
         });
       }
-    }, 100); // adjust the delay (100ms) as needed
+    }, 100); // adjust the delay as needed
   }, []);
 
   const slides = [
@@ -54,9 +56,17 @@ const Home = () => {
     {
       image: brandGraphic,
       title: "Glenfield Opticians",
-      subtitle: "Your local community optometrist dedicated to looking after your eyes.<br/>Dedicated to look after your eyes.",
+      subtitle: "Your local community optometrist.<br/>Dedicated to look after your eyes.",
       button: "Our Services",
       path: "#services"
+    },
+    // New slide for Blue Block Lenses
+    {
+      image: blueBlock,
+      title: "BLUEBLOCK",
+      subtitle: "Reduces Digital Eye Strain!<br>Effective Protection: Blocks 98% of blue rays.",
+      button: "Get Blue Block Lenses",
+      path: "/blueblock"
     }
   ];
 
@@ -86,32 +96,77 @@ const Home = () => {
           </div>
 
           <div className="carousel-inner">
-            {slides.map((slide, index) => (
-              <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                <div
-                  data-aos="fade-up"
-                  data-aos-anchor-placement="top-bottom"
-                  className="carousel-slide-wrapper"
-                  style={{
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    height: '500px'
-                  }}
-                >
-                  <div className="carousel-overlay" />
-                  <div className="d-flex justify-content-center align-items-center h-100">
-                    <div className="carousel-content text-center">
-                      <h1 className="text-white fw-bold">{slide.title}</h1>
-                      <p className="text-light fs-5" dangerouslySetInnerHTML={{ __html: slide.subtitle }} />
-                      <a href={slide.path} className="btn btn-primary mt-3">
-                        {slide.button}
-                      </a>
+            {slides.map((slide, index) => {
+              // If this is the Blue Block slide, render two images side by side
+              if (slide.image === blueBlock) {
+                return (
+                  <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      className="carousel-slide-wrapper"
+                      style={{ height: '500px', backgroundColor: '#000' }}
+                    >
+                      <div className="carousel-overlay" />
+                      <div className="d-flex justify-content-center align-items-center h-100">
+                        <div style={{ display: 'flex', width: '100%', height: '100%' }}>
+                          <img
+                            src={blueBlock}
+                            alt="Blue Block Lenses Advertisement"
+                            style={{ width: '50%', height: '500px', objectFit: 'contain' }}
+                          />
+                          <img
+                            src={photofun}
+                            alt="PhotoFun UV3G Hyper Protective Lens Advertisement"
+                            style={{ width: '50%', height: '500px', objectFit: 'contain' }}
+                          />
+                        </div>
+                        <div className="carousel-content text-center position-absolute w-100" style={{ top: '50%', transform: 'translateY(-50%)' }}>
+                          <h1 className="text-white fw-bold">Advanced Lens Solutions</h1>
+                          <p className="text-light fs-5">
+                            Dual protection for modern lifestyles.<br />
+                            Reduce digital strain indoors and enjoy adaptive clarity outdoors.
+                          </p>
+                          <a href="#services" className="btn btn-primary mt-3">
+                            Discover Our Advanced Lenses
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                );
+              } else {
+                // Default slide layout
+                const slideStyle = {
+                  backgroundImage: `url(${slide.image})`,
+                  backgroundSize: 'cover',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
+                  height: '500px'
+                };
+                return (
+                  <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                    <div
+                      data-aos="fade-up"
+                      data-aos-anchor-placement="top-bottom"
+                      className="carousel-slide-wrapper"
+                      style={slideStyle}
+                    >
+                      <div className="carousel-overlay" />
+                      <div className="d-flex justify-content-center align-items-center h-100">
+                        <div className="carousel-content text-center">
+                          <h1 className="text-white fw-bold">{slide.title}</h1>
+                          <p className="text-light fs-5" dangerouslySetInnerHTML={{ __html: slide.subtitle }} />
+                          <a href={slide.path} className="btn btn-primary mt-3">
+                            {slide.button}
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            })}
           </div>
 
           <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -131,9 +186,9 @@ const Home = () => {
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8 mb-4">
             <div data-aos="zoom-in-up" className="card h-100 shadow-sm border-0 rounded-4 p-3">
-              <h5 className="fw-bold text-info text-center">  About Us</h5>
-              <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We are an independent opticians in Glenfield, Leicester dedicated to look after your eyes since 2009. We pride ourselves on being able to provide a professional, personal and friendly service to the community, which may not always be possible at regular high street practices. Whether you require spectacles or not, we are committed to providing the highest level of eye care. We provide private eye care and have been awarded a contract by the National Health services (NHS) to provide NHS funded eyecare services.
+              <h5 className="fw-bold text-info text-center"><strong>About Us</strong></h5>
+              <p className="text-muted fw-bold" style={{ textAlign: 'justify' }}>
+                We are independent opticians in Glenfield, Leicester, and since 2009 we have been dedicated to looking after your eyes. We pride ourselves on providing a professional, personal, and friendly service to the community, which may not always be possible at regular high-street practices. Whether you require spectacles or not, we are committed to delivering the highest level of eye care. We offer private eye care and have been awarded a contract by the National Health Service (NHS) to provide NHS-funded eye-care services.
               </p>
             </div>
           </div>
@@ -193,6 +248,7 @@ const Home = () => {
         <div data-aos="zoom-in-up" className="container">
           <h2 className="text-center mb-4">Our Services</h2>
           <div className="row">
+            {/* Eye Tests */}
             <div className="col-md-3 mb-4">
               <Link to="/freeeyetest" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
@@ -204,6 +260,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            {/* Home Visits */}
             <div className="col-md-3 mb-4">
               <Link to="/home-visit" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
@@ -215,30 +272,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-md-3 mb-4">
-              <Link to="/corporate-eye-care" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="card h-100 shadow-sm bg-white service-item">
-                  <div className="card-body text-center">
-                    <i className="bi bi-laptop fs-1 text-primary"></i>
-                    <h5 className="card-title mt-3">Corporate Eye Care</h5>
-                    <p className="card-text">On-site eye care services for companies and employees.</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="col-md-3 mb-4">
-              <Link to="/hearing-test" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="card h-100 shadow-sm bg-white service-item">
-                  <div className="card-body text-center">
-                    <i className="bi bi-ear fs-1 text-primary"></i>
-                    <h5 className="card-title mt-3">Hearing Test</h5>
-                    <p className="card-text">Professional hearing assessments by specialists.</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="row">
+            {/* Dispensing of Eye Glasses */}
             <div className="col-md-3 mb-4">
               <Link to="/dispensingofeyeglasses" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
@@ -250,17 +284,22 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            {/* Cataract & Other Referrals */}
             <div className="col-md-3 mb-4">
               <Link to="/cataract-and-other-referrals" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
                   <div className="card-body text-center">
-                    <i className="bi bi-hospital fs-1 text-primary"></i>
+                    {/* Using Font Awesome's hospital icon */}
+                    <i className="fa fa-hospital-o fs-1 text-primary"></i>
                     <h5 className="card-title mt-3">Cataract & Other Referrals</h5>
                     <p className="card-text">Direct referrals to hospital without GP involvement.</p>
                   </div>
                 </div>
               </Link>
             </div>
+          </div>
+          <div className="row">
+            {/* Contact Lens Consultation */}
             <div className="col-md-3 mb-4">
               <Link to="/contact-lens-consultation" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
@@ -272,6 +311,19 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            {/* Corporate Eye Care */}
+            <div className="col-md-3 mb-4">
+              <Link to="/corporate-eye-care" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-laptop fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Corporate Eye Care</h5>
+                    <p className="card-text">On-site eye care services for companies and employees.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            {/* Sale of Optical Product */}
             <div className="col-md-3 mb-4">
               <Link to="/sale-of-optical-product" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
@@ -279,6 +331,18 @@ const Home = () => {
                     <i className="bi bi-shop fs-1 text-primary"></i>
                     <h5 className="card-title mt-3">Sale of Optical Product</h5>
                     <p className="card-text">A wide range of frames, lenses, and accessories.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            {/* Hearing Test */}
+            <div className="col-md-3 mb-4">
+              <Link to="/hearing-test" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-ear fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Hearing Test</h5>
+                    <p className="card-text">Professional hearing assessments by specialists.</p>
                   </div>
                 </div>
               </Link>

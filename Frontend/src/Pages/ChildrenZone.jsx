@@ -36,7 +36,7 @@ const ChildrenZone = () => {
                   textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)"
                 }}
               >
-                <h5 className="text-info fw-bold">Why Children’s Eye Care Matters</h5>
+                <h5 className="text-info fw-bold" style={{ fontSize: '1.75rem' }}>Why Children’s Eye Care Matters</h5>
                 <p className="text-muted" style={{ textAlign: 'justify' }}>
                   As most schools no longer offer Eye Tests, fewer children are having their eyes checked regularly. That's why we want to make it easy and affordable to ensure your child's eyes are being properly cared for.
                 </p>
@@ -70,7 +70,7 @@ const ChildrenZone = () => {
                   textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)"
                 }}
               >
-                <h5 className="text-info fw-bold">Children’s Glasses & Lenses</h5>
+                <h5 className="text-info fw-bold" style={{ fontSize: '1.75rem' }}>Children’s Glasses & Lenses</h5>
                 <p className="text-muted" style={{ textAlign: 'justify' }}>
                   All of our frames offer exceptional durability and comfort, not to mention features like sprung hinges and memory metals.
                 </p>

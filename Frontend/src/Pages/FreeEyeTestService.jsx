@@ -23,10 +23,7 @@ const FreeEyeTestService = () => {
             <div className="card border-0 shadow rounded-4 p-4 bg-white">
               <h5 className="text-info fw-bold mb-3">Comprehensive Eye Examination</h5>
               <p className="text-muted" style={{ textAlign: 'justify' }}>
-                We provide a comprehensive eye examination using state of the art equipments, carried out by a competent friendly practioner with over 30 years of experience.
-                The eye tests include taking a detailed history and symptoms, and tests for muscle balance, pupil reflex, external eye health, internal retinal health, colour vision, stereopsis, eye pressures, visual fields, and vision check for glasses.
-                This is then followed by an outcome discussion and advice.
-                A printed copy of the eye examination outcome that includes a spectacle prescription is given to the patient.
+                We provide a comprehensive eye examination using state-of-the-art equipment, carried out by a friendly practitioner with over 30 years of experience. The examination includes a detailed history review, assessment of symptoms, tests for muscle balance, pupil reflex, external eye health, internal retinal health, colour vision, stereopsis, eye pressures, visual fields, and a vision check for glasses. We also have the facility of Optical Coherence Tomography (OCT) as part of our examination. This is then followed by an outcome discussion and advice. A printed copy of the examination outcome, including a spectacle prescription, is provided to the patient.
               </p>
             </div>
           </div>

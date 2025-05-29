@@ -53,7 +53,6 @@ const HomeVisit = () => {
             </ul>
     
             <p className="mt-4 text-muted">They may also be entitled to NHS support with the cost of their glasses.</p>
-            <p className="text-muted">For more information, <a href="#">click here.</a></p>
     
             <div className="text-center mt-4">
               <Link to="/book-appointment" className="btn btn-primary btn-lg rounded-pill shadow-sm">
