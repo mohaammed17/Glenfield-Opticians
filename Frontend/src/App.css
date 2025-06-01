@@ -435,3 +435,28 @@ section h2 {
     transform: rotate(360deg);
   }
 }
+
+/* CSS for vertical timeline */
+.timeline {
+  margin: 40px 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 0; /* Removed left padding for marker */
+}
+
+/* CSS for hover animation on timeline content */
+.timeline-content {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

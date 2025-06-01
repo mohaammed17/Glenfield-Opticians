@@ -6,8 +6,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import EyeCare from './Pages/EyeCare';
 import ContactLenses from './Pages/ContactLenses';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import SpecialOffers from './Pages/SpecialOffers';
 import ChildrenZone from './Pages/ChildrenZone';
 import FreeEyeTestService from './Pages/FreeEyeTestService';
@@ -23,6 +21,9 @@ import DispensingOfEyeglasses from './Pages/DispensingOfEyeglasses';
 import CataractAndOtherReferrals from './Pages/CataractAndOtherReferrals';
 import ContactLensConsultation from './Pages/ContactLensConsultation';
 import SaleOfOpticalProduct from './Pages/SaleOfOpticalProduct';
+import SafetyGlasses from './Pages/SafetyGlasses';
+import GlazingOfSpectacles from './Pages/GlazingOfSpectacles';
+import OpticalCoherenceTomography from './Pages/OpticalCoherenceTomography'; // New import
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
           <Route path="/cataract-and-other-referrals" element={<CataractAndOtherReferrals />} />
           <Route path="/contact-lens-consultation" element={<ContactLensConsultation />} />
           <Route path="/sale-of-optical-product" element={<SaleOfOpticalProduct />} />
+          <Route path="/safety-glasses" element={<SafetyGlasses />} />
+          <Route path="/glazing-of-spectacles" element={<GlazingOfSpectacles />} />
+          <Route path="/optical-coherence-tomography" element={<OpticalCoherenceTomography />} /> {/* New route */}
         </Routes>
       </main>
       <Footer />

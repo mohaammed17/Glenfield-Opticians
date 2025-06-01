@@ -120,11 +120,7 @@ function Navbar() {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink
-                      to="/cataract-and-other-referrals"
-                      className="dropdown-item"
-                      onClick={handleNavLinkClick}
-                    >
+                    <NavLink to="/cataract-and-other-referrals" className="dropdown-item" onClick={handleNavLinkClick}>
                       Cataract & Other Referrals
                     </NavLink>
                   </li>
@@ -138,6 +134,21 @@ function Navbar() {
                       Sale of Optical Product
                     </NavLink>
                   </li>
+                  <li>
+                    <NavLink to="/safety-glasses" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Safety Glasses
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/glazing-of-spectacles" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Glazing of Spectacles
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/optical-coherence-tomography" className="dropdown-item" onClick={handleNavLinkClick}>
+                      Optical Coherence Tomography (OCT)
+                    </NavLink>
+                  </li>
                 </ul>
               </li>
             </ul>
@@ -145,7 +156,7 @@ function Navbar() {
             {/* Book Button */}
             <motion.div className="d-flex justify-content-lg-end justify-content-center" whileHover={{ scale: 1.05 }}>
               <NavLink to="/book-appointment" className="btn btn-primary px-3 py-2 rounded-pill border-0 shadow-sm" onClick={handleNavLinkClick}>
-                Book an Appointment
+                Book an Appointment 
               </NavLink>
             </motion.div>
           </div>

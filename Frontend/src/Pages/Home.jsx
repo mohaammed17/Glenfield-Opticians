@@ -12,6 +12,7 @@ import slide3 from '../assets/slide3.jpg';
 import brandGraphic from '../assets/mustafa-eye.jpeg';
 import blueBlock from '../assets/bluelock.jpeg';  // Blue Block main image
 import photofun from '../assets/photofun.jpeg';     // Second image for Blue Block slide
+import safetywear from '../assets/safetywear.png'; // New Safety Eyewear image
 
 const Home = () => {
   useEffect(() => {
@@ -56,17 +57,24 @@ const Home = () => {
     {
       image: brandGraphic,
       title: "Glenfield Opticians",
-      subtitle: "Your local community optometrist.<br/>Dedicated to look after your eyes.",
+      subtitle: "Your local community optometrist.<br>Dedicated to looking after your eyes.<br>Your eyesight deserves the highest standards of professional care.",
       button: "Our Services",
       path: "#services"
     },
-    // New slide for Blue Block Lenses
     {
       image: blueBlock,
       title: "BLUEBLOCK",
       subtitle: "Reduces Digital Eye Strain!<br>Effective Protection: Blocks 98% of blue rays.",
       button: "Get Blue Block Lenses",
       path: "/blueblock"
+    },
+    {
+      // Updated Safety Eyewear slide with a shorter subtitle
+      image: safetywear,
+      title: "SAFETY EYEWEAR",
+      subtitle: "Essential protection for industrial environments.",
+      button: "Learn More",
+      path: "/safety-glasses"
     }
   ];
 
@@ -97,7 +105,7 @@ const Home = () => {
 
           <div className="carousel-inner">
             {slides.map((slide, index) => {
-              // If this is the Blue Block slide, render two images side by side
+              // For the Blue Block slide with two images, keep as is.
               if (slide.image === blueBlock) {
                 return (
                   <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
@@ -136,7 +144,7 @@ const Home = () => {
                   </div>
                 );
               } else {
-                // Default slide layout
+                // Default slide layout for non-blueBlock slides - change backgroundSize to cover for the Safety Eyewear slide as well.
                 const slideStyle = {
                   backgroundImage: `url(${slide.image})`,
                   backgroundSize: 'cover',
@@ -247,6 +255,7 @@ const Home = () => {
       <section id="services" className="services-section py-5">
         <div data-aos="zoom-in-up" className="container">
           <h2 className="text-center mb-4">Our Services</h2>
+          
           <div className="row">
             {/* Eye Tests */}
             <div className="col-md-3 mb-4">
@@ -260,6 +269,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            
             {/* Home Visits */}
             <div className="col-md-3 mb-4">
               <Link to="/home-visit" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -272,6 +282,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            
             {/* Dispensing of Eye Glasses */}
             <div className="col-md-3 mb-4">
               <Link to="/dispensingofeyeglasses" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -284,12 +295,12 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            
             {/* Cataract & Other Referrals */}
             <div className="col-md-3 mb-4">
               <Link to="/cataract-and-other-referrals" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="card h-100 shadow-sm bg-white service-item">
                   <div className="card-body text-center">
-                    {/* Using Font Awesome's hospital icon */}
                     <i className="fa fa-hospital-o fs-1 text-primary"></i>
                     <h5 className="card-title mt-3">Cataract & Other Referrals</h5>
                     <p className="card-text">Direct referrals to hospital without GP involvement.</p>
@@ -298,6 +309,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
+          
           <div className="row">
             {/* Contact Lens Consultation */}
             <div className="col-md-3 mb-4">
@@ -311,6 +323,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            
             {/* Corporate Eye Care */}
             <div className="col-md-3 mb-4">
               <Link to="/corporate-eye-care" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -323,6 +336,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            
             {/* Sale of Optical Product */}
             <div className="col-md-3 mb-4">
               <Link to="/sale-of-optical-product" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -335,6 +349,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
+            
             {/* Hearing Test */}
             <div className="col-md-3 mb-4">
               <Link to="/hearing-test" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -348,6 +363,51 @@ const Home = () => {
               </Link>
             </div>
           </div>
+          
+          <div className="row">
+            {/* Safety Glasses */}
+            <div className="col-md-3 mb-4">
+              <Link to="/safety-glasses" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-shield-check fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Safety Glasses</h5>
+                    <p className="card-text">Protective eyewear to safeguard your vision in hazardous environments.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            
+            {/* Glazing of Spectacles */}
+            <div className="col-md-3 mb-4">
+              <Link to="/glazing-of-spectacles" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-tools fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">Glazing of Spectacles</h5>
+                    <p className="card-text">New lenses fitted into your existing frames for a cost-effective vision update.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            
+            {/* Optical Coherence Tomography (OCT) */}
+            <div className="col-md-3 mb-4">
+              <Link to="/optical-coherence-tomography" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="card h-100 shadow-sm bg-white service-item">
+                  <div className="card-body text-center">
+                    <i className="bi bi-camera-video fs-1 text-primary"></i>
+                    <h5 className="card-title mt-3">OCT</h5>
+                    <p className="card-text">Advanced retinal imaging for early detection of eye conditions.</p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            
+            {/* Extra empty column to fill the row for spacing consistency */}
+            <div className="col-md-3 mb-4"></div>
+          </div>
+          
         </div>
       </section>
 
