@@ -6,7 +6,10 @@ import eyeExamImage from '../assets/eyeexam.png';
 
 const FreeEyeTestService = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({
+      duration: 1000,
+      disable: () => window.innerWidth < 768, // disable AOS on devices with width less than 768px
+    });
   }, []);
   
   return (
