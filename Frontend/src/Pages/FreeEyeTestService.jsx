@@ -19,7 +19,7 @@ const FreeEyeTestService = () => {
         </div>
 
         {/* New Comprehensive Eye Examination Replacement Section */}
-        <div className="row mb-5" data-aos="zoom-in">
+        <div className="row mb-5" data-aos="fade-up" data-aos-offset="100">
           <div className="col-lg-10 mx-auto">
             <div className="card border-0 shadow rounded-4 p-4 bg-white">
               {/* New Content Start */}
