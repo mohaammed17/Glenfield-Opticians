@@ -95,7 +95,7 @@ You may not create and/or publish your own database that features substantial pa
                 <p> T: 0116 2874357</p>
                 <p> E: info@Glenfieldopticians.co.uk</p>
 
-                <p className="mt-3"><small>Last updated 13/06/2012<br />© Copyright Glenfield Eyecare Limited 2012. All rights reserved.</small></p>
+                <p className="mt-3"><small>Last updated 1/06/2025<br />© Copyright Glenfield Eyecare Limited 2012. All rights reserved.</small></p>
               </div>
             </div>
           </div>

@@ -101,7 +101,7 @@ const PrivacyPolicy = () => {
 
         <h5 className="text-info fw-bold">7 - Updating, Accessing or Removing Personal Information</h5>
         <p className="text-muted" style={{ textAlign: 'justify' }}>
-          You can amend or remove your personal details either by signing in to Your Account (if you are a registered online customer) or notifying info@glenfieldopticians.co.uk. You are entitled at law to request us whether we hold any of your personal information and, if so, to request a copy of it. If you wish to exercise your data subject access rights, please contact us with sufficient information to verify your identity and the personal information you require. We reserve the right to charge £10 for complying with a subject access rights and shall provide such information within 40 days of your request.
+          You can amend or remove your personal details either by signing in to Your Account (if you are a registered online customer) or notifying info@glenfieldopticians.co.uk. You are entitled at law to request us whether we hold any of your personal information and, if so, to request a copy of it. If you wish to exercise your data subject access rights, please contact us with sufficient information to verify your identity and the personal information you require. We reserve the right to charge £50 for complying with a subject access rights and shall provide such information within 40 days of your request.
         </p>
 
         <h5 className="text-info fw-bold">8 - Marketing Material</h5>
