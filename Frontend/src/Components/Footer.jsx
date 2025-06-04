@@ -27,7 +27,8 @@ export default function Footer() {
               Glenfield Opticians Leicester is a trading name of Glenfield Eyecare Limited.<br />
               Registered in England company registration number #06670441<br />
               Registered Office: 93 Dominion Road, Glenfield, Leicestershire, LE3 8JB<br />
-              VAT No: 11693155
+              VAT No: 11693155<br />
+              GOC Registration Number: CO-3663
             </p>
             <p className="mt-2">
               <strong>Contact:</strong><br />
