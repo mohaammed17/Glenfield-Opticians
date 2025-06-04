@@ -86,14 +86,18 @@ export default function Footer() {
           >
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
-              {[ "/privacy-policy", "freedom-of Information","/terms-& Conditions"].map((path, i) => (
+               {[
+                { path: "/privacy-policy", label: "Privacy Policy" },
+                { path: "/freedom-of-information", label: "Freedom of Information" },
+                { path: "/terms-and-conditions", label: "Terms and Conditions" },
+              ].map(({ path, label }, i) => (
                 <motion.li
                   key={i}
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <Link to={path} className="text-decoration-none text-black">
-                    {path === "/" ? "Home" : path.replace("/", "").replace("-", " ").replace(/\b\w/g, c => c.toUpperCase())}
+                    {label}
                   </Link>
                 </motion.li>
               ))}

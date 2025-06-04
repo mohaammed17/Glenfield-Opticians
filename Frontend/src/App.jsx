@@ -43,8 +43,8 @@ function App() {
           <Route path="/home-visit" element={<HomeVisit />} />
           <Route path="/hearing-test" element={<HearingTest />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/freedom-of information" element={<FreedomOfInformation />} />
-          <Route path="/terms-& Conditions" element={<TermsAndConditions />} />
+          <Route path="/freedom-of-information" element={<FreedomOfInformation />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/book-appointment" element={<BookAppointment />} />
           <Route path="/dispensingofeyeglasses" element={<DispensingOfEyeglasses />} />
           <Route path="/cataract-and-other-referrals" element={<CataractAndOtherReferrals />} />
