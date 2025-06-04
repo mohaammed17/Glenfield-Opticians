@@ -13,6 +13,7 @@ import brandGraphic from '../assets/mustafa-eye.jpeg';
 import blueBlock from '../assets/bluelock.jpeg';  // Blue Block main image
 import photofun from '../assets/photofun.jpeg';     // Second image for Blue Block slide
 import safetywear from '../assets/safetywear.png'; // New Safety Eyewear image
+import audiologist from '../assets/audiologist.jpg';
 
 const Home = () => {
   useEffect(() => {
@@ -75,6 +76,14 @@ const Home = () => {
       subtitle: "Essential protection for industrial environments.",
       button: "Learn More",
       path: "/safety-glasses"
+    },
+    {
+      // New slide for Hearing Test & Audiology Services
+      image: audiologist,
+      title: "Hearing Test & Audiology Services",
+      subtitle: "Check Your Hearing Today - Expert Care You Can Trust",
+      button: "Learn More",
+      path: "/hearing-test"
     }
   ];
 
