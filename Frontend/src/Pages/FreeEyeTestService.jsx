@@ -94,7 +94,7 @@ const FreeEyeTestService = () => {
                 <div className="timeline-item">
                   <div className="timeline-marker"></div>
                   <div className="timeline-content">
-                    <p><strong>■ External and Internal examination:</strong> This is a very important part of your examination because it checks the health of your eyes, both internally and externally. This is done using instruments called a slit lamp and an ophthalmoscope. These enable us to see the internal parts clearly—such as your lens, retina, and optic nerve—and to check for problems like diabetes, cataracts, hypertension, glaucoma, and macular degeneration. In many cases, we may put drops in your eyes to dilate the pupils, giving us a better view of the back of the eye. We may also perform an OCT (Optical Coherence Tomography) scan for better diagnosis..</p>
+                    <p><strong>■ External and Internal examination:</strong> This is a very important part of your examination because it checks the health of your eyes, both internally and externally. This is done using instruments called a slit lamp and an ophthalmoscope. These enable us to see the internal parts clearly—such as your lens, retina, and optic nerve—and to check for problems like diabetes, cataracts, hypertension, glaucoma, and macular degeneration. In many cases, we may put drops in your eyes to dilate the pupils, giving us a better view of the back of the eye. We may also perform an OCT (Optical Coherence Tomography) scan for better diagnosis.</p>
                   </div>
                 </div>
                 <div className="timeline-item">
