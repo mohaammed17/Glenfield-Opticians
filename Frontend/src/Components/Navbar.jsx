@@ -35,7 +35,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3">
         <div className="container-fluid px-4">
           {/* Brand/Logo */}
-          <Link to="/" className="navbar-brand d-flex flex-column align-items-center">
+          <Link to="/" className="navbar-brand d-flex align-items-center">
             <motion.img
               src={logo}
               alt="logo"
@@ -43,9 +43,6 @@ function Navbar() {
               whileHover={{ scale: 1.1 }}
               transition={{ type: 'spring', stiffness: 300 }}
             />
-            <small className="text-muted" style={{ fontSize: '0.8rem' }}>
-              Dedicated to looking after your eyes.
-            </small>
           </Link>
 
           {/* Toggler */}
