@@ -460,3 +460,13 @@ section h2 {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
+.navbar-brand small {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand small {
+    font-size: 0.1rem; /* reduced further from 0.6rem */
+  }
+}

@@ -58,7 +58,7 @@ const Home = () => {
     {
       image: brandGraphic,
       title: "Glenfield Opticians",
-      subtitle: "Your local community optometrist.<br>Dedicated to looking after your eyes.<br>Your eyesight deserves the highest standards of professional care.",
+      subtitle: "Your local community optometrist.",
       button: "Our Services",
       path: "#services"
     },
