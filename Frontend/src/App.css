@@ -1,5 +1,4 @@
-/* MAIn APP*/
-
+/* Main APP */
 .main-content {
   padding-top: 75px;
   flex: 1;
@@ -10,8 +9,7 @@
   min-height: 100vh;
 }
 
-
-/* Navbar*/
+/* Navbar */
 .nav-link {
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -19,7 +17,13 @@
   color: #007bff;
   transform: translateY(-2px);
 }
+
 .logo-img {
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
+  margin-left: 0;
+  margin-right: 90px;
   transition: transform 0.3s ease;
 }
 .logo-img:hover {
@@ -32,10 +36,8 @@
   z-index: 1050;
   overflow: visible;
 }
-
 .main-navbar.scrolled {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /*background-color: #ffffff !important;*/
 }
 
 .nav-link {
@@ -43,7 +45,6 @@
   color: #333 !important;
   transition: color 0.2s ease-in-out;
 }
-
 .nav-link:hover,
 .nav-link.active {
   color: #0d6efd !important;
@@ -54,30 +55,20 @@
   padding: 10px 0;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
-
 .dropdown-item {
   padding: 8px 20px;
   font-weight: 500;
   transition: background-color 0.2s ease-in-out;
 }
-
 .dropdown-item:hover {
   background-color: #f8f9fa;
   color: #0d6efd;
-}
-/* Default logo size */
-.logo-img {
-  max-width: 350px;
-  height: auto;
-  object-fit: contain;
-  margin-left: 0px;
-  margin-right: 90px;
 }
 
 /* On mobile screens, increase the logo size */
 @media (max-width: 576px) {
   .logo-img {
-    max-width: 450px; /* adjust this value as needed */
+    max-width: 450px; /* This value increases the logo size on mobile devices */
   }
 }
 
@@ -88,12 +79,10 @@
   color: #333;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
   color: #0d6efd;
 }
-
 .navbar-nav .nav-link::after {
   content: '';
   position: absolute;
@@ -104,31 +93,9 @@
   background-color: var(--primary-color);
   transition: width 0.3s ease;
 }
-
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
   width: 100%;
-}
-
-/* Tablet screens */
-@media (max-width: 991px) {
-  .logo-img {
-    max-width: 300px;
-  }
-}
-
-/* Mobile screens */
-@media (max-width: 767px) {
-  .logo-img {
-    max-width: 300px;
-  }
-}
-
-/* Small phones */
-@media (max-width: 575px) {
-  .logo-img {
-    max-width: 260px;
-  }
 }
 
 /* === Dropdown Auto Open on Hover === */
@@ -137,15 +104,11 @@
   margin-top: 0; /* Prevent jump */
   animation: fadeIn 0.3s ease-in-out;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
-\.app-wrapper {
-  margin: 0;
-  padding: 0;
-}
+
 /* FOOTER */
 .footer-bg {
   background-color: #000000;
