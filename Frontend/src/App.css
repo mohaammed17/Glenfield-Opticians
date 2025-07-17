@@ -19,7 +19,7 @@
 }
 
 .logo-img {
-  max-width: 350px;
+  max-width: 400px; /* Increased from 350px or your previous value */
   height: auto;
   object-fit: contain;
   margin-left: 0;
