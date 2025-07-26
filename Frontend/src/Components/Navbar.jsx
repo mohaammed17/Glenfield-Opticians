@@ -41,6 +41,7 @@ function Navbar() {
               alt="logo"
               className="logo-img me-2 rounded shadow-sm"
               whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 1.1, rotate: 0 }}  // Ensures no tilt when tapped
               transition={{ type: 'spring', stiffness: 300 }}
             />
           </Link>

@@ -64,7 +64,7 @@ const BookAppointment = () => {
       setErrors({});
       setIsLoading(true); // Show loading
       try {
-        const response = await fetch(`${apiUrl}/api/appointment`, {
+        const response = await fetch(`${apiUrl}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
