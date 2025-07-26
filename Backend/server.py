@@ -1,23 +1,28 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import os
+import os, sys
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 
+sys.path.insert(0, os.path.dirname(__file__))
+
 # Load environment variables from .env
 load_dotenv()
-
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
 DOCTOR_EMAIL = os.getenv("DOCTOR_EMAIL")
 PORT = int(os.getenv("PORT", "5000"))
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/backend/static')
+app.config['APPLICATION_ROOT'] = '/backend'
+
 CORS(app)
 
-@app.route("/api/appointment", methods=["POST"])
+    
+
+@app.route("/", methods=["POST"])
 def appointment():
     formData = request.get_json()
     if not formData:
